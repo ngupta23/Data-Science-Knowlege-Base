@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="2" name="pytest" skipped="3" tests="8" time="0.331"><testcase classname="test_addition" file="test_addition.py" line="3" name="test_add[5-5-10]" time="0.002"></testcase><testcase classname="test_addition" file="test_addition.py" line="3" name="test_add[3-5-12]" time="0.001"><failure message="AssertionError: failed
+assert 8 == 12
+  -8
+  +12">input1 = 3, input2 = 5, output = 12
+
+    @pytest.mark.parametrize(&quot;input1, input2, output&quot;, [(5, 5, 10), (3, 5, 12)])
+    def test_add(input1, input2, output):
+&gt;       assert input1 + input2 == output, &quot;failed&quot;
+E       AssertionError: failed
+E       assert 8 == 12
+E         -8
+E         +12
+
+test_addition.py:6: AssertionError</failure></testcase><testcase classname="test_addition" file="test_addition.py" line="8" name="test_add_1" time="0.001"><skipped message="unconditional skip" type="pytest.skip">test_addition.py:8: unconditional skip</skipped></testcase><testcase classname="test_addition" file="test_addition.py" line="13" name="test_add_2" time="0.000"><skipped message="unconditional skip" type="pytest.skip">test_addition.py:13: unconditional skip</skipped></testcase><testcase classname="test_addition" file="test_addition.py" line="18" name="test_add_3" time="0.002"></testcase><testcase classname="test_addition" file="test_addition.py" line="23" name="test_add_4" time="0.002"><skipped message="" type="pytest.xfail"></skipped></testcase><testcase classname="test_addition" file="test_addition.py" line="28" name="test_add_5" time="0.001"></testcase><testcase classname="test_addition" file="test_addition.py" line="32" name="test_add_6" time="0.002"><failure message="AssertionError: failed
+assert 5 == 6
+  -5
+  +6">def test_add_6():
+&gt;       assert 3+2 == 6, &quot;failed&quot;
+E       AssertionError: failed
+E       assert 5 == 6
+E         -5
+E         +6
+
+test_addition.py:34: AssertionError</failure></testcase></testsuite>

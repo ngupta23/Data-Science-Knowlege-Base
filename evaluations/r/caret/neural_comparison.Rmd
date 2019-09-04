@@ -1,0 +1,301 @@
+---
+title: "neural_comparison"
+author: "Nikhil Gupta"
+date: "`r Sys.time()`"
+always_allow_html: yes
+output:
+ html_document:
+   toc: true
+   toc_float: true
+   toc_depth: 6
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+timestamp <- Sys.time()
+library(caret)
+library(plyr)
+library(recipes)
+library(dplyr)
+```
+
+
+# Classification Problem
+
+## MXNET (Adam Opt)
+
+### Installing MXNet
+```{r}
+# # https://mxnet.apache.org/versions/master/install/windows_setup.html#install-the-mxnet-package-for-r
+# 
+# cran <- getOption("repos")
+# cran["dmlc"] <- "https://apache-mxnet.s3-accelerate.dualstack.amazonaws.com/R/CRAN/"
+# options(repos = cran)
+# install.packages("mxnet")
+```
+
+### Setup
+```{r}
+#https://github.com/topepo/caret/blob/master/RegressionTests/Code/mxnetAdam.R
+
+modelZ <- "mxnetAdam"
+
+## In case the package or one of its dependencies uses random numbers
+## on startup so we'll pre-load the required libraries: 
+
+for(i in getModelInfo(modelZ)[[1]]$library)
+  do.call("requireNamespace", list(package = i))
+
+
+#########################################################################
+## Classification tests
+set.seed(2)
+training <- twoClassSim(50, linearVars = 2)
+testing <- twoClassSim(500, linearVars = 2)
+trainX <- training[, -ncol(training)]
+trainY <- training$Class
+
+cctrl1 <- trainControl(method = "cv", number = 3, returnResamp = "all",
+                       classProbs = TRUE, summaryFunction = twoClassSummary)
+
+
+maGrid <- expand.grid( layer1= c(5,10), layer2 = c(5,10), layer3 = c(0,5,10), activation= 'relu', learningrate=c(1e-02, 1e-3), 
+                       beta1=0.9, beta2=0.9999, dropout=c(0.05,0.20) )
+```
+
+
+### Train
+```{r}
+set.seed(849)
+test_class_cv_model_mxnet <- caret::train(trainX, trainY, method = modelZ, 
+                             trControl = cctrl1, metric = "ROC", preProc = c("center", "scale"),  tuneGrid = maGrid)
+```
+
+### Evaluate
+```{r}
+
+test_class_cv_model_mxnet$resample
+plot(test_class_cv_model_mxnet)
+test_class_cv_model_mxnet$bestTune
+test_class_cv_model_mxnet$results %>% arrange(desc(ROC))
+
+```
+
+
+## mlpWeightDecayML
+
+### Setup
+```{r}
+# https://github.com/topepo/caret/blob/master/RegressionTests/Code/mlpWeightDecayML.R
+
+model <- "mlpWeightDecayML"
+
+set.seed(2)
+
+seeds <- vector(mode = "list", length = nrow(training) + 1)
+seeds <- lapply(seeds, function(x) 1:54)
+
+cctrl1 <- trainControl(method = "cv", number = 3, returnResamp = "all", seeds = seeds,
+                       classProbs = TRUE, summaryFunction = twoClassSummary)
+
+# Install Packages
+library(pacman)
+pacman::p_load(RSNNS)
+
+
+library(RSNNS)
+
+grid <- expand.grid(decay = c(0, .01), layer1= c(5,10), layer2 = c(5,10), layer3 = c(0,5,10))
+
+```
+
+
+### Train
+```{r}
+
+set.seed(849)
+test_class_cv_model_mlpdecay <- caret:::train(trainX, trainY, method = "mlpWeightDecayML",
+                                     trControl = cctrl1, metric = 'ROC', tuneGrid = grid, preProc = c("center", "scale"))
+
+```
+
+### Evaluate
+```{r}
+test_class_cv_model_mlpdecay$resample
+plot(test_class_cv_model_mlpdecay)
+test_class_cv_model_mlpdecay$bestTune
+test_class_cv_model_mlpdecay$results %>% arrange(desc(ROC))
+
+```
+
+
+## Compare Models
+
+```{r}
+# https://machinelearningmastery.com/compare-models-and-select-the-best-using-the-caret-r-package/
+# collect resamples
+results = resamples(list(MXNet=test_class_cv_model_mxnet, mlpWeightDecayML=test_class_cv_model_mlpdecay))
+# summarize the distributions
+summary(results)
+# boxplots of results
+bwplot(results)
+# dot plots of results
+dotplot(results)
+```
+
+
+
+```{r}
+# When returnResample is set to "all", resamples function takes the best setting results as can be correlated below
+# Check out the ROC columns for example -- it will match the Min, Median and Max in the resamples results above
+
+best = test_class_cv_model_mxnet$bestTune
+
+df_temp = test_class_cv_model_mxnet$resample %>%
+  filter(layer1 == best$layer1, layer2 == best$layer2, layer3 == best$layer3,
+         learningrate == best$learningrate, dropout == best$dropout)
+
+print(df_temp)
+fivenum(df_temp$ROC)
+
+```
+
+# Regression Problem
+
+## MXNET (Adam Opt)
+
+### Setup
+```{r}
+modelZ <- "mxnetAdam"
+
+## In case the package or one of its dependencies uses random numbers
+## on startup so we'll pre-load the required libraries: 
+
+# for(i in getModelInfo(modelZ)[[1]]$library)
+#   do.call("requireNamespace", list(package = i))
+
+#########################################################################
+## Regression
+set.seed(1)
+training <- SLC14_1(30)[, 18:21]
+testing <- SLC14_1(100)[, 18:21]
+trainX <- training[, -ncol(training)]
+trainY <- training$y
+
+testX <- testing[, -ncol(training)]
+testY <- testing$y 
+
+seeds <- vector(mode = "list", length = nrow(training) + 1)
+seeds <- lapply(seeds, function(x) 1:20)
+
+rctrl1 <- trainControl(method = "cv", number = 3, returnResamp = "all")#), seeds = seeds)
+#rctrl1 <- trainControl(method = "cv", number = 3, returnResamp = "final")#), seeds = seeds)
+
+maGrid <- expand.grid( layer1= c(5,10), layer2 = c(5,10), layer3 = c(0,5,10), activation= 'relu', learningrate=c(1e-02, 1e-3),
+                       beta1=0.9, beta2=0.9999, dropout=c(0.05,0.20) )
+```
+
+
+### Train
+```{r}
+set.seed(849)
+test_reg_cv_model_mxnet <- caret::train(trainX, trainY, method = modelZ, trControl = rctrl1, tuneGrid = maGrid, 
+                           preProc = c("center", "scale"), 
+                           num.round= 33) # Try passing num.round on purpose
+```
+
+### Evaluate
+```{r}
+
+test_reg_cv_model_mxnet$resample
+plot(test_reg_cv_model_mxnet)
+test_reg_cv_model_mxnet$bestTune
+test_reg_cv_model_mxnet$results %>% arrange(RMSE)
+
+```
+
+
+## mlpWeightDecatML
+
+### Setup
+
+```{r}
+model <- "mlpWeightDecayML"
+
+set.seed(1)
+
+seeds <- vector(mode = "list", length = nrow(training) + 1)
+seeds <- lapply(seeds, function(x) 1:54)
+
+
+training <- SLC14_1(30)
+testing <- SLC14_1(100)
+trainX <- training[, -ncol(training)]
+trainY <- training$y
+
+testX <- trainX[, -ncol(training)]
+testY <- trainX$y
+
+rctrl1 <- trainControl(method = "cv", number = 3, returnResamp = "all", seeds = seeds)
+#rctrl1 <- trainControl(method = "cv", number = 3, returnResamp = "final", seeds = seeds)
+grid <- expand.grid(decay = c(0, .01), layer1= c(5,10), layer2 = c(5,10), layer3 = c(0,5,10))
+
+
+```
+
+### Train
+
+```{r}
+library(RSNNS)
+set.seed(849)
+test_reg_cv_model_mlpdecay <- caret:::train(trainX, trainY,
+                                   method = "mlpWeightDecayML",
+                                   tuneGrid = grid,
+                                   trControl = rctrl1,
+                                   preProc = c("center", "scale"))
+
+
+
+```
+
+### Evaluate
+```{r}
+test_reg_cv_model_mlpdecay$resample
+plot(test_reg_cv_model_mlpdecay)
+test_reg_cv_model_mlpdecay$bestTune
+test_reg_cv_model_mlpdecay$results %>% arrange(RMSE)
+```
+
+## Compare Models
+
+```{r}
+# https://machinelearningmastery.com/compare-models-and-select-the-best-using-the-caret-r-package/
+# collect resamples
+results = resamples(list(MXNet=test_reg_cv_model_mxnet, mlpWeightDecayML=test_reg_cv_model_mlpdecay))
+# summarize the distributions
+summary(results)
+# boxplots of results
+bwplot(results)
+# dot plots of results
+dotplot(results)
+```
+
+```{r}
+# When returnResample is set to "all", resamples function takes the best setting results as can be correlated below
+# Check out the ROC columns for example -- it will match the Min, Median and Max in the resamples results above
+
+best = test_reg_cv_model_mxnet$bestTune
+
+df_temp = test_reg_cv_model_mxnet$resample %>%
+  filter(layer1 == best$layer1, layer2 == best$layer2, layer3 == best$layer3,
+         learningrate == best$learningrate, dropout == best$dropout)
+
+print(df_temp)
+fivenum(df_temp$RMSE)
+
+```
+
+

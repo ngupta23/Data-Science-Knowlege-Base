@@ -1,0 +1,72 @@
+---
+title: "tidyquant"
+author: "Nikhil Gupta"
+date: "`r Sys.time()`"
+always_allow_html: yes
+output:
+ html_document:
+   toc: true
+   toc_float: true
+   toc_depth: 6
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyquant)
+```
+
+
+```{r}
+start = "1970-12-31"
+end = "2019-06-30"
+
+# VOO = ^GPSC
+# IVOO = ^RUT
+# VIOO = ^RUI
+# VEU = 
+# VWO = 
+# VNQ = ^RMZ
+# BND = 
+
+returns_m_components  = c("^GSPC", "^RUT", "^RUI", "VEU", "VWO", "^RMZ", "BND") %>%
+  tq_get(get = "stock.prices",
+         from = start,
+         to = end)
+
+print(returns_m_components)
+
+```
+
+
+```{r}
+
+returns_m_components %>%
+  group_by(symbol) %>%
+  summarize(n=n()) %>%
+  arrange(n)
+
+```
+
+
+```{r}
+filter_plot = function(arData, arSymbol){
+  stock = arData %>%
+    filter(symbol == arSymbol)
+  
+plot(x = stock$date, y = stock$adjusted, main = arSymbol, xlab = "Date", ylab = "Adjusted Price")
+}
+
+filter_plot(returns_m_components, "VEU")
+filter_plot(returns_m_components, "^RMZ")
+```
+
+```{r}
+# # Functions to check out
+# tq_transmute()
+# periodReturn()  # quantmod package
+# tq_portfolio()
+# tq_performance()
+```
