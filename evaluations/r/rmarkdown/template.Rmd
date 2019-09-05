@@ -14,7 +14,11 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r}
 
+```{r}
+rm(list = ls()) # Remove existing variables
+```
+
+```{r}
 
 ```
