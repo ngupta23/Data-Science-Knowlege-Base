@@ -45,6 +45,9 @@
 
 **Bagging, Boosting, Stacking, Ensembles**
 
+**Stacking**
+* Library in Python to do Stacking: https://towardsdatascience.com/automate-stacking-in-python-fc3e7834772e
+
 **XGBoost**
 
 **CatBoost**
