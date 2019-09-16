@@ -2,6 +2,12 @@
 
 ## Basic Concepts
 
+**Distributions**
+* Poisson:
+* Binomial: 
+* Gaussian:
+* Chi-squared:
+
 **Imputing Missing Values**
 * https://towardsdatascience.com/6-different-ways-to-compensate-for-missing-values-data-imputation-with-examples-6022d9ca0779  
 
