@@ -16,6 +16,10 @@
 * https://www.quora.com/How-can-I-tell-the-difference-between-EM-algorithm-and-MLE
 * https://stats.stackexchange.com/questions/201194/confusion-about-the-mle-vs-em-algorithm/201202
 
+**Latent Variables**
+* Hidden Variables that are not observed
+* https://bloomberg.github.io/foml/#lecture-27-em-algorithm-for-latent-variable-models
+
 **Imputing Missing Values**
 * https://towardsdatascience.com/6-different-ways-to-compensate-for-missing-values-data-imputation-with-examples-6022d9ca0779  
 
