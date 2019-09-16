@@ -9,6 +9,13 @@
 * Chi-squared:
 * Negative Binomial: 
 
+**MLE vs. EM**:
+* MLE is for a single distribution (finding parameters that maximize likelihood e.g. regression problems)
+* EM is for data coming from multiple distributions - finding which distribution a data point is coming from (clustering)
+* https://math.stackexchange.com/questions/1390804/what-is-the-relationship-or-difference-between-mle-and-em-algorithm
+* https://www.quora.com/How-can-I-tell-the-difference-between-EM-algorithm-and-MLE
+* https://stats.stackexchange.com/questions/201194/confusion-about-the-mle-vs-em-algorithm/201202
+
 **Imputing Missing Values**
 * https://towardsdatascience.com/6-different-ways-to-compensate-for-missing-values-data-imputation-with-examples-6022d9ca0779  
 
