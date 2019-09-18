@@ -32,6 +32,7 @@
 
 **Data Leakage**
 * https://towardsdatascience.com/data-leakage-part-i-think-you-have-a-great-machine-learning-model-think-again-ad44921fbf34  
+
 **Dimensionality Reduction Techniques**
 * https://towardsdatascience.com/dimension-reduction-techniques-with-python-f36ca7009e5c  
 
@@ -106,6 +107,9 @@
 **Tidyverse**
 * purrr: https://purrr.tidyverse.org/  
 * dplyr for Python: https://github.com/allenakinkunle/dplyr-style-data-manipulation-in-python  
+
+**Visualizations**
+* https://bbc.github.io/rcookbook/#how_to_create_bbc_style_graphics
 
 **Tidyquant (importing historic stock data)**
 * https://github.com/business-science/presentations/blob/master/2019_05_17_RFinance_Tidyquant_Portfolio_Optimization/R_Finance_tidyquant_matt_dancho.pdf
