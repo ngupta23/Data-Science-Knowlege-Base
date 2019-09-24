@@ -118,6 +118,19 @@
 **Plotting (ggplot)**
 * 3D plots with ggplot2: https://www.rayshader.com/reference/plot_gg.html 
 
+**Caret**
+* Overwriting caret's random search: https://stackoverflow.com/questions/53716810/how-to-random-search-in-a-specified-grid-in-caret-package
+
+**MLR**  Needs cleanup
+* General sampling stuff: https://mlr.mlr-org.com/articles/tutorial/resample.html
+* Basic tuning: https://mlr.mlr-org.com/articles/tutorial/tune.html
+* Advanced tuning: https://mlr.mlr-org.com/articles/tutorial/advanced_tune.html
+* So for example custom models https://mlr.mlr-org.com/articles/tutorial/create_learner.html
+* And a bunch of examples of wrapping and extending here https://mlr.mlr-org.com/articles/tutorial/wrapper.html (the bulleted links), basically you can use the wrapper class to really extend the functionality
+
+
+
+
 **Creating a R Package**
 * How to: https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/
 * Example from David Josephs: https://github.com/josephsdavid/tswgewrapped/blob/master/R/aicbic.R 
