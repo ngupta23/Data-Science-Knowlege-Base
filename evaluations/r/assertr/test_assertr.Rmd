@@ -1,0 +1,52 @@
+---
+title: "assertr"
+author: "Nikhil Gupta"
+date: "9/23/2019"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+https://github.com/ropensci/assertr/blob/master/vignettes/assertr.Rmd
+
+```{r}
+library(tidyverse)
+library(assertr)
+```
+
+
+# Common Functions
+```{r}
+common_message_all_errors = function(errors, data){
+  print("The following errors occured >>")
+  print(errors)
+  print("Structure of data >>") 
+  print(str(data))  
+}
+
+error_udf = function(errors, data=NULL, ...){
+  # Must take 'errors' and 'data' as argument
+  common_message_all_errors(errors = errors, data = data)
+  stop("Terminating execution inside User Defined Error Message Function 'error_udf'...")
+}
+```
+
+```{r}
+# Passes
+mtcars %>% 
+  assertr::verify(has_all_names("mpg"))
+```
+
+```{r}
+# Fails with User Defined Function Callback
+mtcars %>% 
+  assertr::verify(has_all_names("mpg2"), error_fun = error_udf)
+```
+
+```{r}
+
+```
+

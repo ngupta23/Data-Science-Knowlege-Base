@@ -1,0 +1,70 @@
+---
+title: "PDF Scraping"
+author: "Nikhil Gupta"
+date: "September 25, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# https://www.business-science.io/code-tools/2019/09/23/tabulizer-pdf-scraping.html
+
+```{r}
+library(rJava)  ## Needed for Tabulizer
+library(tabulizer)
+```
+
+```{r}
+## Does not work with TI Datasheets
+# Open issue on GitHub related to this: https://github.com/ropensci/tabulizer/issues/13 
+ds_ti = tryCatch({
+  tabulizer::extract_tables(
+    file   = "tps54620.pdf", 
+    method = "decide", 
+    output = "data.frame")
+  }, warning = function(e){
+    warning(paste0("WARNING detected: ",e))
+  }, error = function(e){
+    warning(paste0("ERROR detected: ",e))
+  }
+)
+
+```
+
+```{r}
+# Works with ADI datasheets but lot of formatting issues in the tables
+ds_adi = ds = tryCatch({
+  tabulizer::extract_tables(
+    file   = "ADP5076.pdf", 
+    method = "decide", 
+    output = "data.frame")
+  }, warning = function(e){
+    warning(paste0("WARNING detected: ",e))
+  }, error = function(e){
+    warning(paste0("ERROR detected: ",e))
+  }
+)  
+```
+
+
+
+```{r}
+ds_adi[[1]]  # Notice formatting issues (1st column is bogus)
+```
+
+
+```{r}
+ds_adi[[27]]  # Notice formatting issues (Header is showing up in 1st line, scientific symbols dont show up correctly)
+```
+
+# CONCLUSION
+
+While this may be good for ad hoc scraping, making a robust production system with this may be tricky and may require lot of cleaning. Also, it may not be possible to guarantee concistsncy between PDF either. PROCCED WITH CAUTION for building production systems.
+
+
+```{r}
+
+```
+

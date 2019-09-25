@@ -57,11 +57,6 @@
 * Code Example: https://towardsdatascience.com/genetic-algorithm-implementation-in-python-5ab67bb124a6  
 * Full code: https://github.com/ahmedfgad/GeneticAlgorithmPython 
 
-**Neural Network Architecture Search**
-* https://papers.nips.cc/paper/7472-neural-architecture-search-with-bayesian-optimisation-and-optimal-transport.pdf 
-* Code for above paper:  https://github.com/kirthevasank/nasbot   
-* Google: Network Architecture Search using Genetic Algorithms:  https://ai.googleblog.com/2018/03/using-evolutionary-automl-to-discover.html
-
 **Bagging, Boosting, Stacking, Ensembles**
 
 **Stacking**
@@ -77,11 +72,21 @@
 * Spectral Clustering: https://towardsdatascience.com/spectral-clustering-82d3cff3d3b7 
 * DBSCAN:  https://towardsdatascience.com/dbscan-algorithm-complete-guide-and-application-with-python-scikit-learn-d690cbae4c5d   
 
-**Neural Networks**
-* Course: https://www.udemy.com/pytorch-for-deep-learning-with-python-bootcamp/  
+**Artificial Neural Networks**
+* Optimization Algorithms: 
+    - https://towardsdatascience.com/types-of-optimization-algorithms-used-in-neural-networks-and-ways-to-optimize-gradient-95ae5d39529f
+    - https://medium.com/analytics-vidhya/optimization-problem-in-deep-neural-networks-400f853af406
+
+**Convoluted Neural Networks**
+* Impace processing Pipeline: https://github.com/tirthajyoti/Deep-learning-with-Python/blob/master/Notebooks/Keras_flow_from_directory.ipynb
 
 **Recurrent Neural Networks**
 * https://towardsdatascience.com/an-introduction-to-recurrent-neural-networks-for-beginners-664d717adbd  
+
+**Neural Network Architecture Search**
+* https://papers.nips.cc/paper/7472-neural-architecture-search-with-bayesian-optimisation-and-optimal-transport.pdf 
+* Code for above paper:  https://github.com/kirthevasank/nasbot   
+* Google: Network Architecture Search using Genetic Algorithms:  https://ai.googleblog.com/2018/03/using-evolutionary-automl-to-discover.html
 
 **Huber Loss Function**
 * https://towardsdatascience.com/understanding-the-3-most-common-loss-functions-for-machine-learning-regression-23e0ef3e14d3
@@ -98,6 +103,12 @@
 **Anomaly Detection**
 * With LSTM in Keras: https://towardsdatascience.com/anomaly-detection-with-lstm-in-keras-8d8d7e50ab1b
 * In Time Series Data:  https://towardsdatascience.com/anomaly-detection-time-series-4c661f6f165f
+
+**Neural Networks**
+* Course: https://www.udemy.com/pytorch-for-deep-learning-with-python-bootcamp/ 
+
+**Graph Algoriths**
+* https://www.kdnuggets.com/2019/09/5-graph-algorithms-data-scientists-know.html
 
 ## R 
 
@@ -128,10 +139,11 @@
 * So for example custom models https://mlr.mlr-org.com/articles/tutorial/create_learner.html
 * And a bunch of examples of wrapping and extending here https://mlr.mlr-org.com/articles/tutorial/wrapper.html (the bulleted links), basically you can use the wrapper class to really extend the functionality
 
-
-
+**Graphs in R**
+* DiagrameR package: http://visualizers.co/diagrammer/
 
 **Creating a R Package**
+* https://evamaerey.github.io/package_in_20_minutes/package_in_20_minutes
 * How to: https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/
 * Example from David Josephs: https://github.com/josephsdavid/tswgewrapped/blob/master/R/aicbic.R 
     

@@ -1,0 +1,43 @@
+---
+title: "Useful R Code (Basic)"
+author: "Nikhil Gupta"
+date: "9/23/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Lists
+
+## Named Lists
+```{r}
+loList = list()
+loList[['a']] = c(1,2,3)
+loList[['mtcars']] = mtcars
+```
+
+```{r}
+loList$a
+loList['a']  # [] Returns a list
+loList[['a']]  # [[]] Retuens underlying data type
+```
+
+```{r}
+head(loList$mtcars)
+```
+
+## Looping through a named list
+```{r}
+for (lpName in names(loList)){
+  print(lpName)
+}
+```
+
+
+
+```{r}
+
+
+```

@@ -1,0 +1,80 @@
+---
+title: "Morris Method"
+author: "Nikhil Gupta"
+date: "August 8, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(sensitivity)
+```
+
+
+
+```{r}
+my_fun = function(a){
+  y = a[0] + a[1] + 0.1*a[2]
+}
+
+
+my_fun2 = function(X){
+    w <- 2 * (X - 0.5)
+    w[, c(3, 5, 7)] <- 2 * (1.1 * X[, c(3, 5, 7)]/(X[, c(3, 5, 7)] + 0.1) - 0.5)
+    y <- b0
+    for (i in 1:20) {
+        y <- y + b1[i] * w[, i]
+    }
+    for (i in 1:19) {
+        for (j in (i + 1):20) {
+            y <- y + b2[i, j] * w[, i] * w[, j]
+        }
+    }
+    for (i in 1:18) {
+        for (j in (i + 1):19) {
+            for (k in (j + 1):20) {
+                y <- y + b3[i, j, k] * w[, i] * w[, j] * w[, 
+                  k]
+            }
+        }
+    }
+    for (i in 1:17) {
+        for (j in (i + 1):18) {
+            for (k in (j + 1):19) {
+                for (l in (k + 1):20) {
+                  y <- y + b4[i, j, k, l] * w[, i] * w[, j] * 
+                    w[, k] * w[, l]
+                }
+            }
+        }
+    }
+    y
+}
+
+
+```
+
+
+```{r}
+# Test case : the non-monotonic function of Morris
+# x <- morris(model = morris.fun, factors = 20, r = 4,
+#             design = list(type = "oat", levels = 5, grid.jump = 3))
+
+x <- morris(model = my_fun, factors = 5, r = 4,
+            design = list(type = "oat", levels = 5, grid.jump = 3))
+
+print(x)
+plot(x)
+## Not run: morris.plot3d(x)  # (requires the package 'rgl')
+```
+
+```{r}
+morris.fun
+
+morris
+
+```
+
