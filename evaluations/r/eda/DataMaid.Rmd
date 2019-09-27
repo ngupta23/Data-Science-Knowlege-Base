@@ -1,0 +1,54 @@
+---
+title: "Data Maid"
+author: "Nikhil Gupta"
+date: "September 27, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+http://biostat.mc.vanderbilt.edu/wiki/pub/Main/MollyOlson/R-ladies-datamaid.html
+
+```{r}
+library(dataMaid)
+```
+
+# Generate EDA Report
+```{r}
+data(testData)
+makeDataReport(testData, replace = TRUE)
+```
+
+# Make Code Book
+```{r}
+makeCodebook(testData)
+```
+
+# Using Interactively
+
+## Checks
+
+```{r}
+allCheckFunctions()  # Lists all the check functions
+```
+
+Visualize
+```{r}
+allVisualFunctions()
+```
+
+```{r}
+standardVisual()
+```
+
+Summarize
+```{r}
+allSummaryFunctions()
+```
+
+
+
+
+

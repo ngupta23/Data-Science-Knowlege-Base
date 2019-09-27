@@ -1,0 +1,146 @@
+---
+title: "Data Explorer (EDA)"
+author: "Nikhil Gupta"
+date: "September 27, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+https://boxuancui.github.io/DataExplorer/
+
+# EDA - Global Reports
+
+## Without Response Variable
+
+```{r}
+library(DataExplorer)
+create_report(airquality)
+```
+
+## With response variable
+
+```{r}
+library(ggplot2)
+create_report(diamonds, y = "price")
+```
+
+
+
+# EDA - Individual Functions
+
+## Summary Function with Plots
+
+```{r}
+## View basic description for airquality data
+introduce(airquality)
+```
+
+
+```{r}
+## Plot basic description for airquality data
+plot_intro(airquality)
+```
+
+## Missing Values
+
+```{r}
+## View missing value distribution for airquality data
+plot_missing(airquality)
+```
+
+## Bar Plots
+
+```{r}
+## Left: frequency distribution of all discrete variables
+plot_bar(diamonds)
+## Right: `price` distribution of all discrete variables
+plot_bar(diamonds, with = "price")
+```
+
+## Histogram and Density Plots
+
+```{r}
+## View histogram of all continuous variables
+plot_histogram(diamonds)
+```
+
+
+```{r}
+## View estimated density distribution of all continuous variables
+plot_density(diamonds)
+```
+
+## QQ Plots
+
+```{r}
+## View quantile-quantile plot of all continuous variables
+plot_qq(diamonds)
+```
+
+```{r}
+## View quantile-quantile plot of all continuous variables by feature `cut`
+plot_qq(diamonds, by = "cut")
+```
+
+## Cirrelations
+```{r}
+## View overall correlation heatmap
+plot_correlation(diamonds)
+```
+
+## Boxplots
+```{r}
+## View bivariate continuous distribution based on `cut`
+plot_boxplot(diamonds, by = "cut")
+```
+
+## Scatterplots
+```{r}
+## Scatterplot `price` with all other continuous features
+plot_scatterplot(DataExplorer::split_columns(diamonds)$continuous, by = "price", sampled_rows = 1000L)
+```
+
+## PCA
+```{r}
+## Visualize principal component analysis
+plot_prcomp(diamonds, maxcat = 5L)
+```
+
+# Feature Engineering
+
+```{r}
+## Group bottom 20% `clarity` by frequency
+group_category(diamonds, feature = "clarity", threshold = 0.2, update = TRUE)
+
+## Group bottom 20% `clarity` by `price`
+group_category(diamonds, feature = "clarity", threshold = 0.2, measure = "price", update = TRUE)
+
+## Dummify diamonds dataset
+dummify(diamonds)
+dummify(diamonds, select = "cut")  # Only dummifies "cut" column
+
+## Set values for missing observations
+df <- data.frame("a" = rnorm(260), "b" = rep(letters, 10))
+df[sample.int(260, 50), ] <- NA
+set_missing(df, list(0L, "unknown"))
+
+## Update columns
+update_columns(airquality, c("Month", "Day"), as.factor)
+update_columns(airquality, 1L, function(x) x^2)
+
+## Drop columns
+drop_columns(diamonds, 8:10)
+drop_columns(diamonds, "clarity")
+```
+
+
+
+
+
+```{r}
+
+```
+
