@@ -87,6 +87,9 @@
 **Recurrent Neural Networks**
 * https://towardsdatascience.com/an-introduction-to-recurrent-neural-networks-for-beginners-664d717adbd  
 
+**Transfer Learning**
+* https://machinelearningmastery.com/how-to-use-transfer-learning-when-developing-convolutional-neural-network-models/
+
 **Neural Network Architecture Search**
 * https://papers.nips.cc/paper/7472-neural-architecture-search-with-bayesian-optimisation-and-optimal-transport.pdf 
 * Code for above paper:  https://github.com/kirthevasank/nasbot   
