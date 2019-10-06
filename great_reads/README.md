@@ -61,6 +61,9 @@
 * Full code: https://github.com/ahmedfgad/GeneticAlgorithmPython 
 * Genetic Algorithm using tpot library: https://towardsdatascience.com/hyperparameters-optimization-526348bb8e2d
 
+**Support Vector Machines (SVM)**
+* Kernel Trick Visualization: https://www.youtube.com/watch?v=-Z4aojJ-pdg
+
 **Bagging, Boosting, Stacking, Ensembles**
 
 **Stacking**
