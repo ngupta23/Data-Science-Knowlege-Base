@@ -103,12 +103,16 @@
 
 ## Python
 
+**Nice Tutorials**
+* large Collection of notebooks (inc. **Deep Learning**): https://github.com/donnemartin/data-science-ipython-notebooks/tree/master/deep-learning
+
 **Writing Python Package**
 * Adding Dependencies (example): https://github.com/eriklindernoren/Keras-GAN
 
 **Auto ML**
 * https://medium.com/thinkgradient/automated-machine-learning-an-overview-5a3595d5c4b5  
 * autosklearn:  https://automl.github.io/auto-sklearn/master/#  
+* HungaBunga (NEW, has issues - see eval) https://github.com/ypeleg/HungaBunga/blob/master/Readme.md
 
 **Anomaly Detection**
 * With LSTM in Keras: https://towardsdatascience.com/anomaly-detection-with-lstm-in-keras-8d8d7e50ab1b
@@ -117,8 +121,19 @@
 **Neural Networks**
 * Course: https://www.udemy.com/pytorch-for-deep-learning-with-python-bootcamp/ 
 
+**Running from Command Line**
+* Command Line Arguments: https://levelup.gitconnected.com/the-easy-guide-to-python-command-line-arguments-96b4607baea1
+
 **Graph Algoriths**
 * https://www.kdnuggets.com/2019/09/5-graph-algorithms-data-scientists-know.html
+
+**Interactivity**
+* Interactive Widgets: https://ipywidgets.readthedocs.io/en/latest/
+
+**Creating Image Datasets**
+* (**Preferred**) Using fast.ai APIs https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson2-download.ipynb (works in Chrome, may not work in Firefox)
+* Using Google Chrome Extension: https://towardsdatascience.com/https-medium-com-drchemlal-deep-learning-tutorial-1-f94156d79802
+* https://debuggercafe.com/create-your-own-deep-learning-image-dataset/
 
 ## R 
 
@@ -156,7 +171,19 @@
 * https://evamaerey.github.io/package_in_20_minutes/package_in_20_minutes
 * How to: https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/
 * Example from David Josephs: https://github.com/josephsdavid/tswgewrapped/blob/master/R/aicbic.R 
-    
+
+**Publishing**
+* Books and Articles: 
+    - https://bookdown.org/yihui/bookdown/
+    - **Recommended Readings for manual: https://bookdown.org/yihui/bookdown/structure-of-the-book.html**
+* Blogs and Websites: 
+    - https://bookdown.org/yihui/blogdown/
+    - **Recommended Workflow: https://bookdown.org/yihui/blogdown/workflow.html**
+  
+**Snippets or Macros**
+* Overview: https://support.rstudio.com/hc/en-us/articles/204463668-Code-Snippets
+* Useful Snippets: https://raw.githubusercontent.com/gadenbuie/snippets/master/r.snippets
+
 ## Others
 
 **Interview Guide**
