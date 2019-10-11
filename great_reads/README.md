@@ -162,7 +162,9 @@
 * Example from David Josephs: https://github.com/josephsdavid/tswgewrapped/blob/master/R/aicbic.R 
 
 **Publishing**
-* Books and Articles: https://bookdown.org/yihui/bookdown/
+* Books and Articles: 
+    - https://bookdown.org/yihui/bookdown/
+    - **Recommended Readings for manual: https://bookdown.org/yihui/bookdown/structure-of-the-book.html**
 * Blogs and Websites: 
     - https://bookdown.org/yihui/blogdown/
     - **Recommended Workflow: https://bookdown.org/yihui/blogdown/workflow.html**
