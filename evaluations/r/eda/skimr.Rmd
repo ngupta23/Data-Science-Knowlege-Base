@@ -1,0 +1,30 @@
+---
+title: "Skimr"
+author: "Nikhil Gupta"
+date: "September 27, 2019"
+output: html_document
+---
+```{r}
+
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(skimr)
+```
+
+```{r}
+data("credit_data")
+credit_data %>% skimr::skim()
+
+```
+
+
+```{r}
+
+```
+
