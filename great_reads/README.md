@@ -51,11 +51,18 @@
 * 3D Visualization of Hyperparameters: https://towardsdatascience.com/using-3d-visualizations-to-tune-hyperparameters-of-ml-models-with-python-ba2885eab2e9  
 * Converting HyperOpt to a class:  https://github.com/catboost/tutorials/blob/master/classification/classification_with_parameter_tuning_tutorial.ipynb
 * Overriding functions at the instance level: https://stackoverflow.com/questions/394770/override-a-method-at-instance-level
+* Deep Learning Hyperparametyer optimization: 
+    - https://towardsdatascience.com/hyperparameters-optimization-526348bb8e2d
+    = https://machinelearningmastery.com/grid-search-hyperparameters-deep-learning-models-python-keras/
 
 **Genetic Algorithms**
 * Introduction: https://www.linkedin.com/pulse/introduction-optimization-genetic-algorithm-ahmed-gad/ 
 * Code Example: https://towardsdatascience.com/genetic-algorithm-implementation-in-python-5ab67bb124a6  
 * Full code: https://github.com/ahmedfgad/GeneticAlgorithmPython 
+* Genetic Algorithm using tpot library: https://towardsdatascience.com/hyperparameters-optimization-526348bb8e2d
+
+**Support Vector Machines (SVM)**
+* Kernel Trick Visualization: https://www.youtube.com/watch?v=-Z4aojJ-pdg
 
 **Bagging, Boosting, Stacking, Ensembles**
 
@@ -82,6 +89,9 @@
 
 **Recurrent Neural Networks**
 * https://towardsdatascience.com/an-introduction-to-recurrent-neural-networks-for-beginners-664d717adbd  
+
+**Transfer Learning**
+* https://machinelearningmastery.com/how-to-use-transfer-learning-when-developing-convolutional-neural-network-models/
 
 **Neural Network Architecture Search**
 * https://papers.nips.cc/paper/7472-neural-architecture-search-with-bayesian-optimisation-and-optimal-transport.pdf 
