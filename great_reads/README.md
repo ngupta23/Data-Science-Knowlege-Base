@@ -127,6 +127,11 @@
 **Interactivity**
 * Interactive Widgets: https://ipywidgets.readthedocs.io/en/latest/
 
+**Creating Image Datasets**
+* (**Preferred**) Using fast.ai APIs https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson2-download.ipynb (works in Chrome, may not work in Firefox)
+* Using Google Chrome Extension: https://towardsdatascience.com/https-medium-com-drchemlal-deep-learning-tutorial-1-f94156d79802
+* https://debuggercafe.com/create-your-own-deep-learning-image-dataset/
+
 ## R 
 
 **R Utility Packages**
