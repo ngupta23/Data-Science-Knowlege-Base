@@ -160,6 +160,10 @@
 * https://evamaerey.github.io/package_in_20_minutes/package_in_20_minutes
 * How to: https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/
 * Example from David Josephs: https://github.com/josephsdavid/tswgewrapped/blob/master/R/aicbic.R 
+
+**Publishing**
+* Books and Articles: https://bookdown.org/yihui/bookdown/
+* Blogs and Websites: https://bookdown.org/yihui/blogdown/
     
 ## Others
 
