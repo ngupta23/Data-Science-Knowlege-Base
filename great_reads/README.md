@@ -109,7 +109,7 @@
 **Auto ML**
 * https://medium.com/thinkgradient/automated-machine-learning-an-overview-5a3595d5c4b5  
 * autosklearn:  https://automl.github.io/auto-sklearn/master/#  
-* HungaBungs (NEW, has issues - see eval) https://github.com/ypeleg/HungaBunga/blob/master/Readme.md
+* HungaBunga (NEW, has issues - see eval) https://github.com/ypeleg/HungaBunga/blob/master/Readme.md
 
 **Anomaly Detection**
 * With LSTM in Keras: https://towardsdatascience.com/anomaly-detection-with-lstm-in-keras-8d8d7e50ab1b
