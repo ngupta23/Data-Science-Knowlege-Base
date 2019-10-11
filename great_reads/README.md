@@ -118,6 +118,9 @@
 **Neural Networks**
 * Course: https://www.udemy.com/pytorch-for-deep-learning-with-python-bootcamp/ 
 
+**Running from Command Line**
+* Command Line Arguments: https://levelup.gitconnected.com/the-easy-guide-to-python-command-line-arguments-96b4607baea1
+
 **Graph Algoriths**
 * https://www.kdnuggets.com/2019/09/5-graph-algorithms-data-scientists-know.html
 
