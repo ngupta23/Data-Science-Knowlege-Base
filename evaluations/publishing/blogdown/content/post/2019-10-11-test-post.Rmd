@@ -1,0 +1,13 @@
+---
+title: test_post
+author: Nikhil Gupta
+date: '2019-10-11'
+categories:
+  - R
+tags:
+  - R Markdown
+  - resume
+slug: test-post
+---
+
+**This is a test post**
