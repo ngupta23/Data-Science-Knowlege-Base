@@ -163,7 +163,9 @@
 
 **Publishing**
 * Books and Articles: https://bookdown.org/yihui/bookdown/
-* Blogs and Websites: https://bookdown.org/yihui/blogdown/
+* Blogs and Websites: 
+    - https://bookdown.org/yihui/blogdown/
+    - **Recommended Workflow: https://bookdown.org/yihui/blogdown/workflow.html**
     
 ## Others
 
