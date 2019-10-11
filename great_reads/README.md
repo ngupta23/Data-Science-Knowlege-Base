@@ -103,6 +103,9 @@
 
 ## Python
 
+**Nice Tutorials**
+* large Collection of notebooks (inc. **Deep Learning**): https://github.com/donnemartin/data-science-ipython-notebooks/tree/master/deep-learning
+
 **Writing Python Package**
 * Adding Dependencies (example): https://github.com/eriklindernoren/Keras-GAN
 
