@@ -124,6 +124,9 @@
 **Graph Algoriths**
 * https://www.kdnuggets.com/2019/09/5-graph-algorithms-data-scientists-know.html
 
+**Interactivity**
+* Interactive Widgets: https://ipywidgets.readthedocs.io/en/latest/
+
 ## R 
 
 **R Utility Packages**
