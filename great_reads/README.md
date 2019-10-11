@@ -166,7 +166,11 @@
 * Blogs and Websites: 
     - https://bookdown.org/yihui/blogdown/
     - **Recommended Workflow: https://bookdown.org/yihui/blogdown/workflow.html**
-    
+  
+**Snippets or Macros**
+* Overview: https://support.rstudio.com/hc/en-us/articles/204463668-Code-Snippets
+* Useful Snippets: https://raw.githubusercontent.com/gadenbuie/snippets/master/r.snippets
+
 ## Others
 
 **Interview Guide**
