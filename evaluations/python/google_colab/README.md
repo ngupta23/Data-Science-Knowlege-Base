@@ -20,8 +20,8 @@ https://towardsdatascience.com/3-ways-to-load-csv-files-into-colab-7c14fcbdcb92
 ```
 from google.colab import files
 uploaded = files.upload()
-# This will prompy
 ```
+* This will bring up an upload dialog
 
 # Uploading data to Colab using GitHub
 https://medium.com/@yuraist/how-to-upload-your-own-dataset-into-google-colab-e228727c87e9
