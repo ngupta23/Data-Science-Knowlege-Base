@@ -35,6 +35,8 @@
 
 **Dimensionality Reduction Techniques**
 * https://towardsdatascience.com/dimension-reduction-techniques-with-python-f36ca7009e5c  
+* Visualizing data with t-SNE: https://youtu.be/RJVL80Gg3lA
+* t-SNE in detail: https://distill.pub/2016/misread-tsne/
 
 **Feature Engineering**
 * https://towardsdatascience.com/why-automated-feature-engineering-will-change-the-way-you-do-machine-learning-5c15bf188b96 
@@ -65,14 +67,14 @@
 * Kernel Trick Visualization: https://www.youtube.com/watch?v=-Z4aojJ-pdg
 
 **Bagging, Boosting, Stacking, Ensembles**
-
-**Stacking**
-* Library in Python to do Stacking: https://towardsdatascience.com/automate-stacking-in-python-fc3e7834772e
-
-**XGBoost**
-
-**CatBoost**
-* https://medium.com/@hanishsidhu/whats-so-special-about-catboost-335d64d754ae  
+* Basic CART Algorihm: 
+    - Explanation with Code: https://www.youtube.com/watch?v=LDRbO9a6XPU&feature=em-subs_digest
+* Stacking
+    - Library in Python to do Stacking: https://towardsdatascience.com/automate-stacking-in-python-fc3e7834772e
+* XGBoost
+    - TBD
+* CatBoost
+    - https://medium.com/@hanishsidhu/whats-so-special-about-catboost-335d64d754ae  
 
 **Clustering**
 * Various methods and Cluster Validation:  https://towardsdatascience.com/unsupervised-machine-learning-clustering-analysis-d40f2b34ae7e
@@ -85,7 +87,7 @@
     - https://medium.com/analytics-vidhya/optimization-problem-in-deep-neural-networks-400f853af406
 
 **Convoluted Neural Networks**
-* Impace processing Pipeline: https://github.com/tirthajyoti/Deep-learning-with-Python/blob/master/Notebooks/Keras_flow_from_directory.ipynb
+*
 
 **Recurrent Neural Networks**
 * https://towardsdatascience.com/an-introduction-to-recurrent-neural-networks-for-beginners-664d717adbd  
@@ -101,6 +103,14 @@
 **Huber Loss Function**
 * https://towardsdatascience.com/understanding-the-3-most-common-loss-functions-for-machine-learning-regression-23e0ef3e14d3
 
+**Deploying Models**
+* https://www.linkedin.com/posts/activity-6575387094733123584-cpHY/
+    - Deploy an ML model ( #python scikit-learn ) as a REST API -> https://lnkd.in/esyH863
+    - Deploy a Keras model ( #python keras ) -> https://lnkd.in/eSyvcg6
+    - Deploy a Keras model repo -> https://lnkd.in/ev9iAzP
+    - Deploy an R model using Docker -> https://lnkd.in/eSEAwYk
+    - Deploy a tensorflow model on Android -> https://lnkd.in/eDG8ejM
+
 ## Python
 
 **Nice Tutorials**
@@ -112,14 +122,14 @@
 **Auto ML**
 * https://medium.com/thinkgradient/automated-machine-learning-an-overview-5a3595d5c4b5  
 * autosklearn:  https://automl.github.io/auto-sklearn/master/#  
+* MLBox: 
+* TPOT:
+* Auto-Keras: 
 * HungaBunga (NEW, has issues - see eval) https://github.com/ypeleg/HungaBunga/blob/master/Readme.md
 
 **Anomaly Detection**
 * With LSTM in Keras: https://towardsdatascience.com/anomaly-detection-with-lstm-in-keras-8d8d7e50ab1b
 * In Time Series Data:  https://towardsdatascience.com/anomaly-detection-time-series-4c661f6f165f
-
-**Neural Networks**
-* Course: https://www.udemy.com/pytorch-for-deep-learning-with-python-bootcamp/ 
 
 **Running from Command Line**
 * Command Line Arguments: https://levelup.gitconnected.com/the-easy-guide-to-python-command-line-arguments-96b4607baea1
@@ -130,12 +140,59 @@
 **Interactivity**
 * Interactive Widgets: https://ipywidgets.readthedocs.io/en/latest/
 
-**Creating Image Datasets**
-* (**Preferred**) Using fast.ai APIs https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson2-download.ipynb (works in Chrome, may not work in Firefox)
-* Using Google Chrome Extension: https://towardsdatascience.com/https-medium-com-drchemlal-deep-learning-tutorial-1-f94156d79802
-* https://debuggercafe.com/create-your-own-deep-learning-image-dataset/
+### Neural Networks and Deep Learning 
+
+**Fast AI**
+* Cyclical Learning Rate (CLR): 
+    - https://iconof.com/1cycle-learning-rate-policy/
+    - CLR Paper: https://arxiv.org/pdf/1506.01186.pdf
+    - Implementing CLR in Keras: https://github.com/bckenstler/CLR
+* Superconvergence using CLR: https://arxiv.org/pdf/1708.07120.pdf
+* APIs:
+    - DataBlock API: https://docs.fast.ai/data_block.html
+    - Vision API: https://docs.fast.ai/vision.image.html
+    - Datasets: https://course.fast.ai/datasets
+
+**Convolutional Neural Networks**
+* Image Processing Pipeline: https://github.com/tirthajyoti/Deep-learning-with-Python/blob/master/Notebooks/Keras_flow_from_directory.ipynb
+* Image Processing Comprehensive Guide: https://www.pyimagesearch.com/start-here/
+
+**Keras vs. PyTorch**
+* Comparison: 
+    - Overview: https://deepsense.ai/keras-or-pytorch/
+    - Code comparison: https://medium.com/huggingface/understanding-emotions-from-keras-to-pytorch-3ccb61d5a983
+
+**Deep Learning Examples**
+* PyTorch
+    - Basic: https://towardsdatascience.com/training-a-neural-network-using-pytorch-72ab708da210
+    - YOLO v3 in PyTorch: https://blog.paperspace.com/how-to-implement-a-yolo-object-detector-in-pytorch/
+    - CIFAR Image Classification in PyTorch: https://deepsense.ai/deep-learning-hands-on-image-classification/
+* Keras
+    - Face Recognition: https://chatbotslife.com/how-to-build-a-face-recognition-system-17f8425da5e3
+
+**Deep Learning Datasets**
+* MNIST: https://keras.io/datasets/
+* notMNIST: https://github.com/stared/keras-mini-examples/blob/master/notMNIST_starter.ipynb
+* CIFAR: https://keras.io/datasets/
+* Creating your own Image Datasets
+    - (**Preferred**) Using fast.ai APIs https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson2-download.ipynb (works in Chrome, may not work in Firefox)
+    - Using Google Chrome Extension: https://towardsdatascience.com/https-medium-com-drchemlal-deep-learning-tutorial-1-f94156d79802
+    - https://debuggercafe.com/create-your-own-deep-learning-image-dataset/
+
+**RNN**
+* Text Generation using RNNs
+    - http://karpathy.github.io/2015/05/21/rnn-effectiveness/
+    - Character level RNN model: https://gist.github.com/karpathy/d4dee566867f8291f086
+    - Text Generation (like Shakespeare): https://github.com/keras-team/keras/blob/master/examples/lstm_text_generation.py
+
+**Deep Learning with GPUs**
+* Keras on Amazon EC2: https://medium.com/hackernoon/keras-with-gpu-on-amazon-ec2-a-step-by-step-instruction-4f90364e49ac
+
 
 ## R 
+
+**Comaprison to Python**
+* Code comparison Cheatsheet: https://towardsdatascience.com/cheat-sheet-for-python-dataframe-r-dataframe-syntax-conversions-450f656b44ca
 
 **R Utility Packages**
 * dtplyr: https://www.business-science.io/code-tools/2019/08/15/big-data-dtplyr.html  
@@ -188,4 +245,8 @@
 
 **Interview Guide**
 * https://medium.com/better-programming/the-data-science-interview-study-guide-c3824cb76c2e  
+
+**Resume Examples**
+- https://www.slideshare.net/slideshow/embed_code/key/kuZh6Pj9fhETX4
+
 
