@@ -156,6 +156,12 @@
     - Using Google Chrome Extension: https://towardsdatascience.com/https-medium-com-drchemlal-deep-learning-tutorial-1-f94156d79802
     - https://debuggercafe.com/create-your-own-deep-learning-image-dataset/
 
+**RNN**
+* Text Generation using RNNs
+    - http://karpathy.github.io/2015/05/21/rnn-effectiveness/
+    - Character level RNN model: https://gist.github.com/karpathy/d4dee566867f8291f086
+    - Text Generation (like Shakespeare): https://github.com/keras-team/keras/blob/master/examples/lstm_text_generation.py
+
 **Deep Learning with GPUs**
 * Keras on Amazon EC2: https://medium.com/hackernoon/keras-with-gpu-on-amazon-ec2-a-step-by-step-instruction-4f90364e49ac
 
