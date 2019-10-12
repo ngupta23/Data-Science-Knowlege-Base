@@ -103,6 +103,14 @@
 **Huber Loss Function**
 * https://towardsdatascience.com/understanding-the-3-most-common-loss-functions-for-machine-learning-regression-23e0ef3e14d3
 
+**Deploying Models**
+* https://www.linkedin.com/posts/activity-6575387094733123584-cpHY/
+    - Deploy an ML model ( #python scikit-learn ) as a REST API -> https://lnkd.in/esyH863
+    - Deploy a Keras model ( #python keras ) -> https://lnkd.in/eSyvcg6
+    - Deploy a Keras model repo -> https://lnkd.in/ev9iAzP
+    - Deploy an R model using Docker -> https://lnkd.in/eSEAwYk
+    - Deploy a tensorflow model on Android -> https://lnkd.in/eDG8ejM
+
 ## Python
 
 **Nice Tutorials**
