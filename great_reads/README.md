@@ -87,7 +87,8 @@
     - https://medium.com/analytics-vidhya/optimization-problem-in-deep-neural-networks-400f853af406
 
 **Convoluted Neural Networks**
-* Impace processing Pipeline: https://github.com/tirthajyoti/Deep-learning-with-Python/blob/master/Notebooks/Keras_flow_from_directory.ipynb
+* Image Processing Pipeline: https://github.com/tirthajyoti/Deep-learning-with-Python/blob/master/Notebooks/Keras_flow_from_directory.ipynb
+* Image Processing Comprehensive Guide: https://www.pyimagesearch.com/start-here/
 
 **Recurrent Neural Networks**
 * https://towardsdatascience.com/an-introduction-to-recurrent-neural-networks-for-beginners-664d717adbd  
@@ -188,6 +189,9 @@
 
 
 ## R 
+
+**Comaprison to Python**
+* Code comparison Cheatsheet: https://towardsdatascience.com/cheat-sheet-for-python-dataframe-r-dataframe-syntax-conversions-450f656b44ca
 
 **R Utility Packages**
 * dtplyr: https://www.business-science.io/code-tools/2019/08/15/big-data-dtplyr.html  
