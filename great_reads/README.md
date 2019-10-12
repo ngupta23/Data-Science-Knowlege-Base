@@ -219,3 +219,7 @@
 **Interview Guide**
 * https://medium.com/better-programming/the-data-science-interview-study-guide-c3824cb76c2e  
 
+**Resume Examples**
+- https://www.slideshare.net/slideshow/embed_code/key/kuZh6Pj9fhETX4
+
+
