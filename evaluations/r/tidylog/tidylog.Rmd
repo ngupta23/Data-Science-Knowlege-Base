@@ -1,0 +1,40 @@
+---
+title: "tidylog"
+author: "Nikhil Gupta"
+date: "October 11, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+https://github.com/elbersb/tidylog
+
+```{r}
+library("dplyr")
+library("tidyr")
+library("tidylog", warn.conflicts = FALSE)
+```
+
+```{r}
+filtered <- filter(mtcars, cyl == 4)
+#> filter: removed 21 rows (66%), 11 rows remaining
+mutated <- mutate(mtcars, new_var = wt ** 2)
+#> mutate: new variable 'new_var' with 29 unique values and 0% NA
+```
+
+```{r}
+summary <- mtcars %>%
+    select(mpg, cyl, hp, am) %>%
+    filter(mpg > 15) %>%
+    mutate(mpg_round = round(mpg)) %>%
+    group_by(cyl, mpg_round, am) %>%
+    tally() %>%
+    filter(n >= 1)
+```
+
+```{r}
+
+```
+
