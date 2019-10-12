@@ -65,14 +65,14 @@
 * Kernel Trick Visualization: https://www.youtube.com/watch?v=-Z4aojJ-pdg
 
 **Bagging, Boosting, Stacking, Ensembles**
-
-**Stacking**
-* Library in Python to do Stacking: https://towardsdatascience.com/automate-stacking-in-python-fc3e7834772e
-
-**XGBoost**
-
-**CatBoost**
-* https://medium.com/@hanishsidhu/whats-so-special-about-catboost-335d64d754ae  
+* Basic CART Algorihm: 
+    - Explanation with Code: https://www.youtube.com/watch?v=LDRbO9a6XPU&feature=em-subs_digest
+* Stacking
+    - Library in Python to do Stacking: https://towardsdatascience.com/automate-stacking-in-python-fc3e7834772e
+* XGBoost
+    - TBD
+* CatBoost
+    - https://medium.com/@hanishsidhu/whats-so-special-about-catboost-335d64d754ae  
 
 **Clustering**
 * Various methods and Cluster Validation:  https://towardsdatascience.com/unsupervised-machine-learning-clustering-analysis-d40f2b34ae7e
@@ -138,6 +138,7 @@
 
 **PyTorch**
 * Examples
+    - Basic: https://towardsdatascience.com/training-a-neural-network-using-pytorch-72ab708da210
     - YOLO v3 in PyTorch: https://blog.paperspace.com/how-to-implement-a-yolo-object-detector-in-pytorch/
     - CIFAR Image Classification in PyTorch: https://deepsense.ai/deep-learning-hands-on-image-classification/
 
