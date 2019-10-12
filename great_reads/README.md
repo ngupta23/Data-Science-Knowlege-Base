@@ -87,8 +87,7 @@
     - https://medium.com/analytics-vidhya/optimization-problem-in-deep-neural-networks-400f853af406
 
 **Convoluted Neural Networks**
-* Image Processing Pipeline: https://github.com/tirthajyoti/Deep-learning-with-Python/blob/master/Notebooks/Keras_flow_from_directory.ipynb
-* Image Processing Comprehensive Guide: https://www.pyimagesearch.com/start-here/
+*
 
 **Recurrent Neural Networks**
 * https://towardsdatascience.com/an-introduction-to-recurrent-neural-networks-for-beginners-664d717adbd  
@@ -132,32 +131,44 @@
 * With LSTM in Keras: https://towardsdatascience.com/anomaly-detection-with-lstm-in-keras-8d8d7e50ab1b
 * In Time Series Data:  https://towardsdatascience.com/anomaly-detection-time-series-4c661f6f165f
 
-**Neural Networks**
-* Course: https://www.udemy.com/pytorch-for-deep-learning-with-python-bootcamp/ 
-* Fast AI:
-    - Cyclical Learning Rate (CLR): 
-        - https://iconof.com/1cycle-learning-rate-policy/
-        - CLR Paper: https://arxiv.org/pdf/1506.01186.pdf
-        - Implementing CLR in Keras: https://github.com/bckenstler/CLR
-    - Superconvergence using CLR: https://arxiv.org/pdf/1708.07120.pdf
-    - APIs:
-        - DataBlock API: https://docs.fast.ai/data_block.html
-        - Vision API: https://docs.fast.ai/vision.image.html
-        - Datasets: https://course.fast.ai/datasets
-        
+**Running from Command Line**
+* Command Line Arguments: https://levelup.gitconnected.com/the-easy-guide-to-python-command-line-arguments-96b4607baea1
+
+**Graph Algoriths**
+* https://www.kdnuggets.com/2019/09/5-graph-algorithms-data-scientists-know.html
+
+**Interactivity**
+* Interactive Widgets: https://ipywidgets.readthedocs.io/en/latest/
+
+### Neural Networks and Deep Learning 
+
+**Fast AI**
+* Cyclical Learning Rate (CLR): 
+    - https://iconof.com/1cycle-learning-rate-policy/
+    - CLR Paper: https://arxiv.org/pdf/1506.01186.pdf
+    - Implementing CLR in Keras: https://github.com/bckenstler/CLR
+* Superconvergence using CLR: https://arxiv.org/pdf/1708.07120.pdf
+* APIs:
+    - DataBlock API: https://docs.fast.ai/data_block.html
+    - Vision API: https://docs.fast.ai/vision.image.html
+    - Datasets: https://course.fast.ai/datasets
+
+**Convolutional Neural Networks**
+* Image Processing Pipeline: https://github.com/tirthajyoti/Deep-learning-with-Python/blob/master/Notebooks/Keras_flow_from_directory.ipynb
+* Image Processing Comprehensive Guide: https://www.pyimagesearch.com/start-here/
+
 **Keras vs. PyTorch**
 * Comparison: 
     - Overview: https://deepsense.ai/keras-or-pytorch/
     - Code comparison: https://medium.com/huggingface/understanding-emotions-from-keras-to-pytorch-3ccb61d5a983
 
-**PyTorch**
-* Examples
+**Deep Learning Examples**
+* PyTorch
     - Basic: https://towardsdatascience.com/training-a-neural-network-using-pytorch-72ab708da210
     - YOLO v3 in PyTorch: https://blog.paperspace.com/how-to-implement-a-yolo-object-detector-in-pytorch/
     - CIFAR Image Classification in PyTorch: https://deepsense.ai/deep-learning-hands-on-image-classification/
-    
-**Deep Learning Examples**
-* Face Recognition: https://chatbotslife.com/how-to-build-a-face-recognition-system-17f8425da5e3
+* Keras
+    - Face Recognition: https://chatbotslife.com/how-to-build-a-face-recognition-system-17f8425da5e3
 
 **Deep Learning Datasets**
 * MNIST: https://keras.io/datasets/
@@ -176,16 +187,6 @@
 
 **Deep Learning with GPUs**
 * Keras on Amazon EC2: https://medium.com/hackernoon/keras-with-gpu-on-amazon-ec2-a-step-by-step-instruction-4f90364e49ac
-
-**Running from Command Line**
-* Command Line Arguments: https://levelup.gitconnected.com/the-easy-guide-to-python-command-line-arguments-96b4607baea1
-
-**Graph Algoriths**
-* https://www.kdnuggets.com/2019/09/5-graph-algorithms-data-scientists-know.html
-
-**Interactivity**
-* Interactive Widgets: https://ipywidgets.readthedocs.io/en/latest/
-
 
 
 ## R 
