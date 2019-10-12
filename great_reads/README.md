@@ -146,6 +146,9 @@
     - Basic: https://towardsdatascience.com/training-a-neural-network-using-pytorch-72ab708da210
     - YOLO v3 in PyTorch: https://blog.paperspace.com/how-to-implement-a-yolo-object-detector-in-pytorch/
     - CIFAR Image Classification in PyTorch: https://deepsense.ai/deep-learning-hands-on-image-classification/
+    
+**Deep Learning Examples**
+* Face Recognition: https://chatbotslife.com/how-to-build-a-face-recognition-system-17f8425da5e3
 
 **Deep Learning Datasets**
 * MNIST: https://keras.io/datasets/
