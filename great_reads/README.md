@@ -35,6 +35,8 @@
 
 **Dimensionality Reduction Techniques**
 * https://towardsdatascience.com/dimension-reduction-techniques-with-python-f36ca7009e5c  
+* Visualizing data with t-SNE: https://youtu.be/RJVL80Gg3lA
+* t-SNE in detail: https://distill.pub/2016/misread-tsne/
 
 **Feature Engineering**
 * https://towardsdatascience.com/why-automated-feature-engineering-will-change-the-way-you-do-machine-learning-5c15bf188b96 
