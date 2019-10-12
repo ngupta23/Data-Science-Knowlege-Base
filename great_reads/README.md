@@ -132,26 +132,26 @@
         - Datasets: https://course.fast.ai/datasets
         
 **Keras vs. PyTorch**
-    - Comparison: 
-        - Overview: https://deepsense.ai/keras-or-pytorch/
-        - Code comparison: https://medium.com/huggingface/understanding-emotions-from-keras-to-pytorch-3ccb61d5a983
+* Comparison: 
+    - Overview: https://deepsense.ai/keras-or-pytorch/
+    - Code comparison: https://medium.com/huggingface/understanding-emotions-from-keras-to-pytorch-3ccb61d5a983
 
 **PyTorch**
-    - Examples
-        - YOLO v3 in PyTorch: https://blog.paperspace.com/how-to-implement-a-yolo-object-detector-in-pytorch/
-        - CIFAR Image Classification in PyTorch: https://deepsense.ai/deep-learning-hands-on-image-classification/
+* Examples
+    - YOLO v3 in PyTorch: https://blog.paperspace.com/how-to-implement-a-yolo-object-detector-in-pytorch/
+    - CIFAR Image Classification in PyTorch: https://deepsense.ai/deep-learning-hands-on-image-classification/
 
 **Deep Learning Datasets**
-    - MNIST: https://keras.io/datasets/
-    - notMNIST: https://github.com/stared/keras-mini-examples/blob/master/notMNIST_starter.ipynb
-    - CIFAR: https://keras.io/datasets/
-    - Creating your own Image Datasets
-        - (**Preferred**) Using fast.ai APIs https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson2-download.ipynb (works in Chrome, may not work in Firefox)
-        - Using Google Chrome Extension: https://towardsdatascience.com/https-medium-com-drchemlal-deep-learning-tutorial-1-f94156d79802
-        - https://debuggercafe.com/create-your-own-deep-learning-image-dataset/
+* MNIST: https://keras.io/datasets/
+* notMNIST: https://github.com/stared/keras-mini-examples/blob/master/notMNIST_starter.ipynb
+* CIFAR: https://keras.io/datasets/
+* Creating your own Image Datasets
+    - (**Preferred**) Using fast.ai APIs https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson2-download.ipynb (works in Chrome, may not work in Firefox)
+    - Using Google Chrome Extension: https://towardsdatascience.com/https-medium-com-drchemlal-deep-learning-tutorial-1-f94156d79802
+    - https://debuggercafe.com/create-your-own-deep-learning-image-dataset/
 
 **Deep Learning with GPUs**
-    - Keras on Amazon EC2: https://medium.com/hackernoon/keras-with-gpu-on-amazon-ec2-a-step-by-step-instruction-4f90364e49ac
+* Keras on Amazon EC2: https://medium.com/hackernoon/keras-with-gpu-on-amazon-ec2-a-step-by-step-instruction-4f90364e49ac
 
 **Running from Command Line**
 * Command Line Arguments: https://levelup.gitconnected.com/the-easy-guide-to-python-command-line-arguments-96b4607baea1
