@@ -120,6 +120,17 @@
 
 **Neural Networks**
 * Course: https://www.udemy.com/pytorch-for-deep-learning-with-python-bootcamp/ 
+* Fast AI:
+    - Cyclical Learning Rate (CLR): 
+        - https://iconof.com/1cycle-learning-rate-policy/
+        - CLR Paper: https://arxiv.org/pdf/1506.01186.pdf
+        - Implementing CLR in Keras: https://github.com/bckenstler/CLR
+    - Superconvergence using CLR: https://arxiv.org/pdf/1708.07120.pdf
+    -APIs:
+        - DataBlock API: https://docs.fast.ai/data_block.html
+        - Vision API: https://docs.fast.ai/vision.image.html
+        - Datasets: https://course.fast.ai/datasets
+
 
 **Running from Command Line**
 * Command Line Arguments: https://levelup.gitconnected.com/the-easy-guide-to-python-command-line-arguments-96b4607baea1
