@@ -126,7 +126,7 @@
         - CLR Paper: https://arxiv.org/pdf/1506.01186.pdf
         - Implementing CLR in Keras: https://github.com/bckenstler/CLR
     - Superconvergence using CLR: https://arxiv.org/pdf/1708.07120.pdf
-    -APIs:
+    - APIs:
         - DataBlock API: https://docs.fast.ai/data_block.html
         - Vision API: https://docs.fast.ai/vision.image.html
         - Datasets: https://course.fast.ai/datasets
