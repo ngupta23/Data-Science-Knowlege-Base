@@ -114,6 +114,9 @@
 **Auto ML**
 * https://medium.com/thinkgradient/automated-machine-learning-an-overview-5a3595d5c4b5  
 * autosklearn:  https://automl.github.io/auto-sklearn/master/#  
+* MLBox: 
+* TPOT:
+* Auto-Keras: 
 * HungaBunga (NEW, has issues - see eval) https://github.com/ypeleg/HungaBunga/blob/master/Readme.md
 
 **Anomaly Detection**
