@@ -86,6 +86,11 @@
     - https://towardsdatascience.com/types-of-optimization-algorithms-used-in-neural-networks-and-ways-to-optimize-gradient-95ae5d39529f
     - https://medium.com/analytics-vidhya/optimization-problem-in-deep-neural-networks-400f853af406
 
+**Deep Learning**
+* deeplearning.ai Notebooks 
+    - (This is better): https://github.com/sanzgiri/deeplearning.ai
+    - https://github.com/tamirlan1/Deeplearning.ai
+        
 **Convoluted Neural Networks**
 *
 
