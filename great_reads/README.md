@@ -218,6 +218,9 @@
 **Plotting (ggplot)**
 * 3D plots with ggplot2: https://www.rayshader.com/reference/plot_gg.html 
 
+**Time Series**
+* Forecasting wth RNN: https://blogs.rstudio.com/tensorflow/posts/2017-12-20-time-series-forecasting-with-recurrent-neural-networks/
+
 **Caret**
 * Overwriting caret's random search: https://stackoverflow.com/questions/53716810/how-to-random-search-in-a-specified-grid-in-caret-package
 
