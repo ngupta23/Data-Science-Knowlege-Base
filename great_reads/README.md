@@ -90,7 +90,10 @@
 * deeplearning.ai Notebooks 
     - (This is better): https://github.com/sanzgiri/deeplearning.ai
     - https://github.com/tamirlan1/Deeplearning.ai
-        
+* Stanford CS231
+    - http://cs231n.github.io/
+    - https://github.com/cs231n/cs231n.github.io
+
 **Convoluted Neural Networks**
 *
 
