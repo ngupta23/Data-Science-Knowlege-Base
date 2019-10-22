@@ -86,6 +86,14 @@
     - https://towardsdatascience.com/types-of-optimization-algorithms-used-in-neural-networks-and-ways-to-optimize-gradient-95ae5d39529f
     - https://medium.com/analytics-vidhya/optimization-problem-in-deep-neural-networks-400f853af406
 
+**Deep Learning**
+* deeplearning.ai Notebooks 
+    - (This is better): https://github.com/sanzgiri/deeplearning.ai
+    - https://github.com/tamirlan1/Deeplearning.ai
+* Stanford CS231
+    - http://cs231n.github.io/
+    - https://github.com/cs231n/cs231n.github.io
+
 **Convoluted Neural Networks**
 *
 
@@ -167,6 +175,8 @@
     - Basic: https://towardsdatascience.com/training-a-neural-network-using-pytorch-72ab708da210
     - YOLO v3 in PyTorch: https://blog.paperspace.com/how-to-implement-a-yolo-object-detector-in-pytorch/
     - CIFAR Image Classification in PyTorch: https://deepsense.ai/deep-learning-hands-on-image-classification/
+    - Visualization CNN: https://towardsdatascience.com/visualizing-convolution-neural-networks-using-pytorch-3dfa8443e74e
+        * Notebook available in my Colab: https://colab.research.google.com/drive/1WSCuLiFSpUBRNu4WkN77cuBWKieTk-VT)
 * Keras
     - Face Recognition: https://chatbotslife.com/how-to-build-a-face-recognition-system-17f8425da5e3
 
@@ -210,6 +220,9 @@
 
 **Plotting (ggplot)**
 * 3D plots with ggplot2: https://www.rayshader.com/reference/plot_gg.html 
+
+**Time Series**
+* Forecasting wth RNN: https://blogs.rstudio.com/tensorflow/posts/2017-12-20-time-series-forecasting-with-recurrent-neural-networks/
 
 **Caret**
 * Overwriting caret's random search: https://stackoverflow.com/questions/53716810/how-to-random-search-in-a-specified-grid-in-caret-package
