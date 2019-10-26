@@ -151,6 +151,9 @@
 ### Neural Networks and Deep Learning 
 
 **Fast AI**
+* Local Installation
+    - v1: https://medium.com/@pierre_guillou/how-to-install-fastai-v1-on-windows-10-ca1bc370dce4
+    - Older version (0.7): https://forums.fast.ai/t/fastai-v0-7-install-issues-thread/24652
 * Cyclical Learning Rate (CLR): 
     - https://iconof.com/1cycle-learning-rate-policy/
     - CLR Paper: https://arxiv.org/pdf/1506.01186.pdf
