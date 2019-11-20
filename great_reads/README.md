@@ -182,6 +182,8 @@
         * Notebook available in my Colab: https://colab.research.google.com/drive/1WSCuLiFSpUBRNu4WkN77cuBWKieTk-VT)
 * Keras
     - Face Recognition: https://chatbotslife.com/how-to-build-a-face-recognition-system-17f8425da5e3
+* Misc
+    - https://d2l.ai/chapter_computer-vision/index.html (An interactive deep learning book with code, math, and discussions. Used at Berkeley, University of Washington and more) Link from @David Stroud
 
 **Deep Learning Datasets**
 * MNIST: https://keras.io/datasets/
