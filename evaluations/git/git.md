@@ -27,4 +27,11 @@
   # For local branch
   $ git branch -d <branch_name>
   ```
+  
+# Pruning a local branch that has been deleted remotely
+* https://stackoverflow.com/questions/13064613/how-to-prune-local-tracking-branches-that-do-not-exist-on-remote-anymore
+
+  ```
+  $ git fetch -p
+  ```
 
