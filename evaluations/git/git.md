@@ -27,11 +27,20 @@
   # For local branch
   $ git branch -d <branch_name>
   ```
-  
+
 # Pruning a local branch that has been deleted remotely
 * https://stackoverflow.com/questions/13064613/how-to-prune-local-tracking-branches-that-do-not-exist-on-remote-anymore
 
   ```
   $ git fetch -p
   ```
+
+# Listing all branches
+* https://stackoverflow.com/questions/12370714/git-how-do-i-list-only-local-branches
+
+```
+$ git branch -a # shows both remote and local branches.
+$ git branch -r # shows remote branches.
+$ git branch    # With no arguments, existing branches are listed and the current branch will be highlighted with an asterisk.
+```
 
