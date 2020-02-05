@@ -246,6 +246,10 @@
 * https://evamaerey.github.io/package_in_20_minutes/package_in_20_minutes
 * How to: https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/
 * Example from David Josephs: https://github.com/josephsdavid/tswgewrapped/blob/master/R/aicbic.R 
+* Specific Commands
+    - usethis::use_test() # To use test_that with your package
+    - devtools::test()    # to run your unit tests
+    - covr::report()      # creating a unit test coverage report
 
 **Publishing**
 * Books and Articles: 
