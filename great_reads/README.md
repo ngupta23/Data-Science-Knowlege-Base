@@ -151,6 +151,9 @@
 ### Neural Networks and Deep Learning 
 
 **Fast AI**
+* Local Installation
+    - v1: https://medium.com/@pierre_guillou/how-to-install-fastai-v1-on-windows-10-ca1bc370dce4
+    - Older version (0.7): https://forums.fast.ai/t/fastai-v0-7-install-issues-thread/24652
 * Cyclical Learning Rate (CLR): 
     - https://iconof.com/1cycle-learning-rate-policy/
     - CLR Paper: https://arxiv.org/pdf/1506.01186.pdf
@@ -179,6 +182,8 @@
         * Notebook available in my Colab: https://colab.research.google.com/drive/1WSCuLiFSpUBRNu4WkN77cuBWKieTk-VT)
 * Keras
     - Face Recognition: https://chatbotslife.com/how-to-build-a-face-recognition-system-17f8425da5e3
+* Misc
+    - https://d2l.ai/chapter_computer-vision/index.html (An interactive deep learning book with code, math, and discussions. Used at Berkeley, University of Washington and more) Link from @David Stroud
 
 **Deep Learning Datasets**
 * MNIST: https://keras.io/datasets/
@@ -241,6 +246,10 @@
 * https://evamaerey.github.io/package_in_20_minutes/package_in_20_minutes
 * How to: https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/
 * Example from David Josephs: https://github.com/josephsdavid/tswgewrapped/blob/master/R/aicbic.R 
+* Specific Commands
+    - usethis::use_test() # To use test_that with your package
+    - devtools::test()    # to run your unit tests
+    - covr::report()      # creating a unit test coverage report
 
 **Publishing**
 * Books and Articles: 
