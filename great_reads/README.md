@@ -222,6 +222,8 @@
 **Tidyquant (importing historic stock data)**
 * https://github.com/business-science/presentations/blob/master/2019_05_17_RFinance_Tidyquant_Portfolio_Optimization/R_Finance_tidyquant_matt_dancho.pdf
 * https://www.youtube.com/watch?v=OjIZIHPwvKs&feature=youtu.be 
+* Core Functions: https://cran.r-project.org/web/packages/tidyquant/vignettes/TQ01-core-functions-in-tidyquant.html
+* Portfolio Performance Analysis: https://cran.r-project.org/web/packages/tidyquant/vignettes/TQ05-performance-analysis-with-tidyquant.html
 
 **Plotting (ggplot)**
 * 3D plots with ggplot2: https://www.rayshader.com/reference/plot_gg.html 
