@@ -108,6 +108,10 @@
 * Code for above paper:  https://github.com/kirthevasank/nasbot   
 * Google: Network Architecture Search using Genetic Algorithms:  https://ai.googleblog.com/2018/03/using-evolutionary-automl-to-discover.html
 
+**Time Series**
+* Why LSTM may not work for AR type of problems: https://machinelearningmastery.com/suitability-long-short-term-memory-networks-time-series-forecasting/
+
+
 **Huber Loss Function**
 * https://towardsdatascience.com/understanding-the-3-most-common-loss-functions-for-machine-learning-regression-23e0ef3e14d3
 
@@ -173,6 +177,11 @@
     - Overview: https://deepsense.ai/keras-or-pytorch/
     - Code comparison: https://medium.com/huggingface/understanding-emotions-from-keras-to-pytorch-3ccb61d5a983
 
+**Keras Related Topics**
+* Early Stopping: https://machinelearningmastery.com/how-to-stop-training-deep-neural-networks-at-the-right-time-using-early-stopping/
+* Grid Search for Time Series RNN Architecture Search: https://machinelearningmastery.com/how-to-grid-search-deep-learning-models-for-time-series-forecasting/
+
+
 **Deep Learning Examples**
 * PyTorch
     - Basic: https://towardsdatascience.com/training-a-neural-network-using-pytorch-72ab708da210
@@ -182,6 +191,11 @@
         * Notebook available in my Colab: https://colab.research.google.com/drive/1WSCuLiFSpUBRNu4WkN77cuBWKieTk-VT)
 * Keras
     - Face Recognition: https://chatbotslife.com/how-to-build-a-face-recognition-system-17f8425da5e3
+    - Time Series
+        * Basic: https://machinelearningmastery.com/time-series-prediction-lstm-recurrent-neural-networks-python-keras/
+        * Multivariate: https://machinelearningmastery.com/multivariate-time-series-forecasting-lstms-keras/
+        * Formatting time series data in the right format for Keras: https://machinelearningmastery.com/convert-time-series-supervised-learning-problem-python/
+        
 * Misc
     - https://d2l.ai/chapter_computer-vision/index.html (An interactive deep learning book with code, math, and discussions. Used at Berkeley, University of Washington and more) Link from @David Stroud
 
@@ -202,6 +216,7 @@
 
 **Deep Learning with GPUs**
 * Keras on Amazon EC2: https://medium.com/hackernoon/keras-with-gpu-on-amazon-ec2-a-step-by-step-instruction-4f90364e49ac
+
 
 
 ## R 
