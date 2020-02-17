@@ -56,6 +56,7 @@
 * Deep Learning Hyperparametyer optimization: 
     - https://towardsdatascience.com/hyperparameters-optimization-526348bb8e2d
     = https://machinelearningmastery.com/grid-search-hyperparameters-deep-learning-models-python-keras/
+* Parallelizing Hyperparameter optimization using PySpark clusters: https://towardsdatascience.com/100x-faster-randomized-hyperparameter-searching-framework-with-pyspark-4de19e44f5e6
 
 **Genetic Algorithms**
 * Introduction: https://www.linkedin.com/pulse/introduction-optimization-genetic-algorithm-ahmed-gad/ 
