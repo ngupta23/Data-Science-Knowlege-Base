@@ -96,7 +96,7 @@
     - https://github.com/cs231n/cs231n.github.io
 
 **Convoluted Neural Networks**
-*
+
 
 **Recurrent Neural Networks**
 * https://towardsdatascience.com/an-introduction-to-recurrent-neural-networks-for-beginners-664d717adbd  
@@ -111,6 +111,11 @@
 
 **Time Series**
 * Why LSTM may not work for AR type of problems: https://machinelearningmastery.com/suitability-long-short-term-memory-networks-time-series-forecasting/
+* Using CNN type architecture by converting time series data to image: https://towardsdatascience.com/stock-market-action-prediction-with-convnet-8689238feae3
+* Stock Market Prediction:
+    - Using LSTM (1 layer) + 2 Dense layers: https://towardsdatascience.com/predicting-stock-price-with-lstm-13af86a74944
+    - Using LSTM (4 layers) + 1 Dense layer: https://blog.usejournal.com/stock-market-prediction-by-recurrent-neural-network-on-lstm-model-56de700bff68
+* InceptionTime for Time Series Classification: https://towardsdatascience.com/deep-learning-for-time-series-classification-inceptiontime-245703f422db
 
 
 **Huber Loss Function**
