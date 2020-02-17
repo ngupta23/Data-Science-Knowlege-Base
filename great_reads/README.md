@@ -176,6 +176,7 @@
 **Keras vs. PyTorch**
 * Comparison: 
     - Overview: https://deepsense.ai/keras-or-pytorch/
+    - Model definition options and fit comparison: https://towardsdatascience.com/pytorch-vs-tensorflow-in-code-ada936fd5406
     - Code comparison: https://medium.com/huggingface/understanding-emotions-from-keras-to-pytorch-3ccb61d5a983
 
 **Keras Related Topics**
