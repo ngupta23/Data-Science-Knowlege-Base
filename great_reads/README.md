@@ -56,6 +56,7 @@
 * Deep Learning Hyperparametyer optimization: 
     - https://towardsdatascience.com/hyperparameters-optimization-526348bb8e2d
     = https://machinelearningmastery.com/grid-search-hyperparameters-deep-learning-models-python-keras/
+* Parallelizing Hyperparameter optimization using PySpark clusters: https://towardsdatascience.com/100x-faster-randomized-hyperparameter-searching-framework-with-pyspark-4de19e44f5e6
 
 **Genetic Algorithms**
 * Introduction: https://www.linkedin.com/pulse/introduction-optimization-genetic-algorithm-ahmed-gad/ 
@@ -95,7 +96,7 @@
     - https://github.com/cs231n/cs231n.github.io
 
 **Convoluted Neural Networks**
-*
+
 
 **Recurrent Neural Networks**
 * https://towardsdatascience.com/an-introduction-to-recurrent-neural-networks-for-beginners-664d717adbd  
@@ -107,6 +108,15 @@
 * https://papers.nips.cc/paper/7472-neural-architecture-search-with-bayesian-optimisation-and-optimal-transport.pdf 
 * Code for above paper:  https://github.com/kirthevasank/nasbot   
 * Google: Network Architecture Search using Genetic Algorithms:  https://ai.googleblog.com/2018/03/using-evolutionary-automl-to-discover.html
+
+**Time Series**
+* Why LSTM may not work for AR type of problems: https://machinelearningmastery.com/suitability-long-short-term-memory-networks-time-series-forecasting/
+* Using CNN type architecture by converting time series data to image: https://towardsdatascience.com/stock-market-action-prediction-with-convnet-8689238feae3
+* Stock Market Prediction:
+    - Using LSTM (1 layer) + 2 Dense layers: https://towardsdatascience.com/predicting-stock-price-with-lstm-13af86a74944
+    - Using LSTM (4 layers) + 1 Dense layer: https://blog.usejournal.com/stock-market-prediction-by-recurrent-neural-network-on-lstm-model-56de700bff68
+* InceptionTime for Time Series Classification: https://towardsdatascience.com/deep-learning-for-time-series-classification-inceptiontime-245703f422db
+
 
 **Huber Loss Function**
 * https://towardsdatascience.com/understanding-the-3-most-common-loss-functions-for-machine-learning-regression-23e0ef3e14d3
@@ -171,7 +181,13 @@
 **Keras vs. PyTorch**
 * Comparison: 
     - Overview: https://deepsense.ai/keras-or-pytorch/
+    - Model definition options and fit comparison: https://towardsdatascience.com/pytorch-vs-tensorflow-in-code-ada936fd5406
     - Code comparison: https://medium.com/huggingface/understanding-emotions-from-keras-to-pytorch-3ccb61d5a983
+
+**Keras Related Topics**
+* Early Stopping: https://machinelearningmastery.com/how-to-stop-training-deep-neural-networks-at-the-right-time-using-early-stopping/
+* Grid Search for Time Series RNN Architecture Search: https://machinelearningmastery.com/how-to-grid-search-deep-learning-models-for-time-series-forecasting/
+
 
 **Deep Learning Examples**
 * PyTorch
@@ -182,6 +198,11 @@
         * Notebook available in my Colab: https://colab.research.google.com/drive/1WSCuLiFSpUBRNu4WkN77cuBWKieTk-VT)
 * Keras
     - Face Recognition: https://chatbotslife.com/how-to-build-a-face-recognition-system-17f8425da5e3
+    - Time Series
+        * Basic: https://machinelearningmastery.com/time-series-prediction-lstm-recurrent-neural-networks-python-keras/
+        * Multivariate: https://machinelearningmastery.com/multivariate-time-series-forecasting-lstms-keras/
+        * Formatting time series data in the right format for Keras: https://machinelearningmastery.com/convert-time-series-supervised-learning-problem-python/
+        
 * Misc
     - https://d2l.ai/chapter_computer-vision/index.html (An interactive deep learning book with code, math, and discussions. Used at Berkeley, University of Washington and more) Link from @David Stroud
 
@@ -204,6 +225,7 @@
 * Keras on Amazon EC2: https://medium.com/hackernoon/keras-with-gpu-on-amazon-ec2-a-step-by-step-instruction-4f90364e49ac
 
 
+
 ## R 
 
 **Comaprison to Python**
@@ -222,6 +244,8 @@
 **Tidyquant (importing historic stock data)**
 * https://github.com/business-science/presentations/blob/master/2019_05_17_RFinance_Tidyquant_Portfolio_Optimization/R_Finance_tidyquant_matt_dancho.pdf
 * https://www.youtube.com/watch?v=OjIZIHPwvKs&feature=youtu.be 
+* Core Functions: https://cran.r-project.org/web/packages/tidyquant/vignettes/TQ01-core-functions-in-tidyquant.html
+* Portfolio Performance Analysis: https://cran.r-project.org/web/packages/tidyquant/vignettes/TQ05-performance-analysis-with-tidyquant.html
 
 **Plotting (ggplot)**
 * 3D plots with ggplot2: https://www.rayshader.com/reference/plot_gg.html 
