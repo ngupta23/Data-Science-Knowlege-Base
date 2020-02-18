@@ -158,6 +158,16 @@
 **Interactivity**
 * Interactive Widgets: https://ipywidgets.readthedocs.io/en/latest/
 
+**Dashboards and Apps**
+* Dash App Development (from plotly)
+    * https://dash.plot.ly/: Basics are covered in tutorials 1-3
+    * Sample Apps: https://github.com/plotly/dash-sample-apps/tree/master/app
+    * Detailed Example: https://towardsdatascience.com/how-to-build-a-complex-reporting-dashboard-using-dash-and-plotl-4f4257c18a7f
+* Starlette
+* Streamlit
+* Flask
+
+
 ### Neural Networks and Deep Learning 
 
 **Fast AI**
