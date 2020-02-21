@@ -114,7 +114,11 @@
 * Using CNN type architecture by converting time series data to image: https://towardsdatascience.com/stock-market-action-prediction-with-convnet-8689238feae3
 * Stock Market Prediction:
     - Using LSTM (1 layer) + 2 Dense layers: https://towardsdatascience.com/predicting-stock-price-with-lstm-13af86a74944
+        * Uses stateful = True and works well over a longish run
+        * Also uses a lot of data for training (> 13,000 sets of observations)
     - Using LSTM (4 layers) + 1 Dense layer: https://blog.usejournal.com/stock-market-prediction-by-recurrent-neural-network-on-lstm-model-56de700bff68
+        * Uses stateful = False and not sure how well it predicts over the long run (test results were only shown for 20 days). 
+        * Training data size ~ 5 years of daily returns ~ 1250 observations.
 * InceptionTime for Time Series Classification: https://towardsdatascience.com/deep-learning-for-time-series-classification-inceptiontime-245703f422db
 
 
