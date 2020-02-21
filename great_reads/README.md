@@ -111,6 +111,8 @@
 
 **Time Series**
 * Why LSTM will not work for a random walk (stock) prediction problem: https://towardsdatascience.com/how-not-to-use-machine-learning-for-time-series-forecasting-avoiding-the-pitfalls-19f9d7adf424
+    - Very well presented article. Talks about the ARIMA theory and that the dataset after differencing is just white noise which by definition can not be predicted.
+    - LSTM in this case becomes just a persistance model (prediction = last value) which is what ARIMA would also do.
 * Why LSTM may not work for AR type of problems: https://machinelearningmastery.com/suitability-long-short-term-memory-networks-time-series-forecasting/
 * Using CNN type architecture by converting time series data to image: https://towardsdatascience.com/stock-market-action-prediction-with-convnet-8689238feae3
 * Stock Market Prediction:
