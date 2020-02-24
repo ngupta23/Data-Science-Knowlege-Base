@@ -257,6 +257,7 @@
 
 **Visualizations**
 * https://bbc.github.io/rcookbook/#how_to_create_bbc_style_graphics
+* Organizing ggplots using Patchwork package (very good): https://github.com/thomasp85/patchwork
 
 **Tidyquant (importing historic stock data)**
 * https://github.com/business-science/presentations/blob/master/2019_05_17_RFinance_Tidyquant_Portfolio_Optimization/R_Finance_tidyquant_matt_dancho.pdf
