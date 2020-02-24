@@ -292,6 +292,10 @@
     - devtools::test()    # to run your unit tests
     - covr::report()      # creating a unit test coverage report
 
+**Finance**
+* Discounted Cash Flow Analysis
+    - Matt Dancho: https://www.business-science.io/finance/2020/02/21/tidy-discounted-cash-flow.html 
+
 **Publishing**
 * Books and Articles: 
     - https://bookdown.org/yihui/bookdown/
