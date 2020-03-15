@@ -292,6 +292,8 @@
     - usethis::use_test() # To use test_that with your package
     - devtools::test()    # to run your unit tests
     - covr::report()      # creating a unit test coverage report
+    - usethis::use_vignette("vignette_name")  # create a vignette to show how the object flow works
+    - usethis::use_pipe() # To remove warnings due to the pipe operation from magrittr
 
 **Finance**
 * Discounted Cash Flow Analysis
