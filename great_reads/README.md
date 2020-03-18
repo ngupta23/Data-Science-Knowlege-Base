@@ -295,6 +295,7 @@
     - usethis::use_vignette("vignette_name")  # create a vignette to show how the object flow works
     - usethis::use_pipe() # To remove warnings due to the pipe operation from magrittr
     - Dplyr Column Names error with devtools::check() https://community.rstudio.com/t/devtools-check-giving-error-on-dplyr-column-names/56754
+    - usethis::use_build_ignore(".github") - You should add things that are not meant for the package to .Rbuildignore, e.g. via
     - R6 Documentation: https://stackoverflow.com/questions/60668602/r6-documentation-using-roxygen
 
 **Finance**
