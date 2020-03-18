@@ -294,6 +294,7 @@
     - covr::report()      # creating a unit test coverage report
     - usethis::use_vignette("vignette_name")  # create a vignette to show how the object flow works
     - usethis::use_pipe() # To remove warnings due to the pipe operation from magrittr
+    - Dplyr Column Names error with devtools::check() https://community.rstudio.com/t/devtools-check-giving-error-on-dplyr-column-names/56754
 
 **Finance**
 * Discounted Cash Flow Analysis
