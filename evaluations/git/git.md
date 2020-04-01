@@ -15,9 +15,30 @@
 * Content between <<<<<<< HEAD & ======= is the content on the local branch.
 * Content between ======= HEAD & >>>>>>> 6213be7b31803862f4260a1f6d549fc150177d34 is the content from remote
 
+# Conflict resolution
+
+```
+git checkout --ours codefile.js
+git checkout --theirs codefile.js
+```
+
+# Removing already committed file
+
+[Stack Exchange Link](https://stackoverflow.com/questions/1143796/remove-a-file-from-a-git-repository-without-deleting-it-from-the-local-filesyste): **Removes from repo but not from local folder**
+
+So, for a single file:
+
+```
+git rm --cached mylogfile.log
+```
+
+and for a single directory:
+```
+git rm --cached -r mydirectory
+```
 
 # Deleting a branch
-* https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-locally-and-remotely Check out Executive Summary
+[Stack Exchange Link](https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-locally-and-remotely): **Check out Executive Summary**
   
   ```
   # For remote repo (with example)
