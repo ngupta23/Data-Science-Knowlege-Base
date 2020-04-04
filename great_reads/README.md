@@ -297,6 +297,7 @@
     - Dplyr Column Names error with devtools::check() https://community.rstudio.com/t/devtools-check-giving-error-on-dplyr-column-names/56754
     - usethis::use_build_ignore(".github") - You should add things that are not meant for the package to .Rbuildignore using this command.
     - R6 Documentation: https://stackoverflow.com/questions/60668602/r6-documentation-using-roxygen
+    - Unit Testing: http://r-pkgs.had.co.nz/tests.html
 
 **Finance**
 * Discounted Cash Flow Analysis
