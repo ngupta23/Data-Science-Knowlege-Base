@@ -298,6 +298,9 @@
     - usethis::use_build_ignore(".github") - You should add things that are not meant for the package to .Rbuildignore using this command.
     - R6 Documentation: https://stackoverflow.com/questions/60668602/r6-documentation-using-roxygen
     - Unit Testing: http://r-pkgs.had.co.nz/tests.html
+    - Creating website for package
+        * One time: usethis::use_pkgdown()
+        * Repeat to update website: pkgdown::build_site()
 
 **Finance**
 * Discounted Cash Flow Analysis
