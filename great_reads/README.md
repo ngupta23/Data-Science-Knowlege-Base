@@ -304,6 +304,7 @@
     - Package DESCRIPTION and Namespaces
         * http://r-pkgs.had.co.nz/description.html
         * http://r-pkgs.had.co.nz/namespace.html
+        * https://stackoverflow.com/questions/8637993/better-explanation-of-when-to-use-imports-depends
 
 **Finance**
 * Discounted Cash Flow Analysis
