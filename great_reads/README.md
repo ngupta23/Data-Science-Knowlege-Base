@@ -301,6 +301,9 @@
     - Creating website for package
         * One time: usethis::use_pkgdown()
         * Repeat to update website: pkgdown::build_site()
+    - Package DESCRIPTION and Namespaces
+        * http://r-pkgs.had.co.nz/description.html
+        * http://r-pkgs.had.co.nz/namespace.html
 
 **Finance**
 * Discounted Cash Flow Analysis
