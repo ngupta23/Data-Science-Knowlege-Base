@@ -284,28 +284,6 @@
 **Graphs in R**
 * DiagrameR package: http://visualizers.co/diagrammer/
 
-**Creating a R Package**
-* https://evamaerey.github.io/package_in_20_minutes/package_in_20_minutes
-* How to: https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/
-* Example from David Josephs: https://github.com/josephsdavid/tswgewrapped/blob/master/R/aicbic.R 
-* Specific Commands
-    - usethis::use_test() # To use test_that with your package
-    - devtools::test()    # to run your unit tests
-    - covr::report()      # creating a unit test coverage report
-    - usethis::use_vignette("vignette_name")  # create a vignette to show how the object flow works
-    - usethis::use_pipe() # To remove warnings due to the pipe operation from magrittr
-    - Dplyr Column Names error with devtools::check() https://community.rstudio.com/t/devtools-check-giving-error-on-dplyr-column-names/56754
-    - usethis::use_build_ignore(".github") - You should add things that are not meant for the package to .Rbuildignore using this command.
-    - R6 Documentation: https://stackoverflow.com/questions/60668602/r6-documentation-using-roxygen
-    - Unit Testing: http://r-pkgs.had.co.nz/tests.html
-    - Creating website for package
-        * One time: usethis::use_pkgdown()
-        * Repeat to update website: pkgdown::build_site()
-    - Package DESCRIPTION and Namespaces
-        * http://r-pkgs.had.co.nz/description.html
-        * http://r-pkgs.had.co.nz/namespace.html
-        * https://stackoverflow.com/questions/8637993/better-explanation-of-when-to-use-imports-depends
-
 **Finance**
 * Discounted Cash Flow Analysis
     - Matt Dancho: https://www.business-science.io/finance/2020/02/21/tidy-discounted-cash-flow.html 
