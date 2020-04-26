@@ -1,0 +1,341 @@
+---
+title: "Caret Ensemble"
+author: "Nikhil Gupta"
+date: "`r Sys.time()`"
+always_allow_html: yes
+output:
+  github_document:
+    toc: true
+    toc_depth: 6
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 6
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+rm(list = ls()) # Remove existing variables
+```
+
+
+# Link
+
+https://machinelearningmastery.com/machine-learning-ensembles-with-r/
+
+
+```{r}
+# Load libraries
+library(mlbench)
+library(caret)
+library(caretEnsemble)
+library(dplyr)
+```
+
+```{r}
+# Load the dataset
+data(Ionosphere)
+dataset <- Ionosphere
+
+# Note that the first attribute was a factor (0,1) and has been transformed to be numeric for consistency with all of the other numeric attributes.
+# Also note that the second attribute is a constant and has been removed.
+dataset <- dataset[,-2]
+dataset$V1 <- as.numeric(as.character(dataset$V1))
+```
+
+# Boosting
+
+```{r}
+# Example of Boosting Algorithms
+control <- trainControl(method="repeatedcv", number=10, repeats=3)
+seed <- 7
+metric <- "Accuracy"
+```
+
+## C5.0
+```{r}
+set.seed(seed)
+fit.c50 <- train(Class~., data=dataset, method="C5.0", metric=metric, trControl=control)
+```
+
+## Stochastic Gradient Boosting
+```{r}
+set.seed(seed)
+fit.gbm <- train(Class~., data=dataset, method="gbm", metric=metric, trControl=control, verbose=FALSE)
+```
+
+## summarize results
+```{r}
+boosting_results <- caret::resamples(list(c5.0=fit.c50, gbm=fit.gbm))
+summary(boosting_results)
+lattice::dotplot(boosting_results)
+```
+
+# Bagging
+
+```{r}
+# Example of Bagging algorithms
+control <- trainControl(method="repeatedcv", number=10, repeats=3)
+seed <- 7
+metric <- "Accuracy"
+```
+
+## Bagged CART
+```{r}
+set.seed(seed)
+fit.treebag <- train(Class~., data=dataset, method="treebag", metric=metric, trControl=control)
+```
+
+## Random Forest
+```{r}
+set.seed(seed)
+fit.rf <- train(Class~., data=dataset, method="rf", metric=metric, trControl=control)
+```
+
+## Summarize results
+```{r}
+bagging_results <- resamples(list(treebag=fit.treebag, rf=fit.rf))
+summary(bagging_results)
+dotplot(bagging_results)
+```
+
+# Stacking
+
+## Create submodels
+```{r}
+# Example of Stacking algorithms
+
+control <- trainControl(method="repeatedcv", number=10, repeats=3, savePredictions=TRUE, classProbs=TRUE)
+algorithmList <- c('lda', 'rpart', 'glm', 'knn', 'svmRadial')
+set.seed(seed)
+models <- caretEnsemble::caretList(Class~., data=dataset, trControl=control, methodList=algorithmList)
+```
+
+```{r}
+results <- resamples(models)
+summary(results)
+dotplot(results)
+```
+
+```{r}
+# Predictions on base models
+p <- as.data.frame(predict(models, newdata=head(dataset)))
+print(p)
+```
+
+When we combine the predictions of different models using stacking, it is desirable that the predictions made by the sub-models have low correlation. This would suggest that the models are skillful but in different ways, allowing a new classifier to figure out how to get the best from each model for an improved score.
+
+If the predictions for the sub-models were highly corrected (>0.75) then they would be making the same or very similar predictions most of the time reducing the benefit of combining the predictions.
+
+
+```{r fig.width=10, fig.height=10}
+# correlation between results
+caret::modelCor(results)
+lattice::splom(results)
+```
+
+## Stack (caretStack - glm)
+```{r}
+stackControl <- trainControl(method="repeatedcv", number=10, repeats=3, savePredictions=TRUE, classProbs=TRUE)
+set.seed(seed)
+stack.glm <- caretEnsemble::caretStack(models, method="glm", metric="Accuracy", trControl=stackControl)
+print(stack.glm)
+```
+
+## Stack (caretEnsemble - lm)
+
+```{r}
+stackControl <- trainControl(method="repeatedcv", number=10, repeats=3, savePredictions=TRUE, classProbs=TRUE)
+greedy_ensemble <- caretEnsemble(models, metric="Accuracy", trControl=stackControl)
+summary(greedy_ensemble)
+```
+
+
+We can also use more sophisticated algorithms to combine predictions in an effort to tease out when best to use the different methods. In this case, we can use the random forest algorithm to combine the predictions.
+
+## Stack (caretStack - Random Forest)
+```{r}
+set.seed(seed)
+stack.rf <- caretEnsemble::caretStack(models, method="rf", metric="Accuracy", trControl=stackControl)
+print(stack.rf)
+```
+
+## Predictions with Stacked Model
+```{r}
+predictions = predict(stack.rf, newdata = dataset %>% dplyr::select(-Class))
+train_accuracy = sum(predictions == dataset$Class)/nrow(dataset)
+train_accuracy
+```
+
+# From the horse's mouth
+
+* https://cran.r-project.org/web/packages/caretEnsemble/vignettes/caretEnsemble-intro.html
+
+## Setup
+
+```{r}
+#Adapted from the caret vignette
+library("caret")
+library("mlbench")
+library("pROC")
+data(Sonar)
+set.seed(107)
+inTrain <- createDataPartition(y = Sonar$Class, p = .75, list = FALSE)
+training <- Sonar[ inTrain,]
+testing <- Sonar[-inTrain,]
+my_control <- trainControl(
+  method="boot",
+  number=25,
+  savePredictions="final",
+  classProbs=TRUE,
+  index=createResample(training$Class, 25),
+  summaryFunction=twoClassSummary
+  )
+
+```
+
+Notice that we are explicitly setting the resampling index to being used in trainControl. If you do not set this index manually, caretList will attempt to set it for automatically, **but it"s generally a good idea to set it yourself.**
+
+## Customizing Model List
+
+```{r}
+library("mlbench")
+library("randomForest")
+library("nnet")
+
+# This will create 5 models - glm and rpart with defaults, and rf1, rf2, nn with the customized parameters
+model_list_big <- caretList(
+  Class~., data=training,
+  trControl=my_control,
+  metric="ROC",
+  methodList=c("glm", "rpart"),
+  tuneList=list(
+    rf1=caretModelSpec(method="rf", tuneGrid=data.frame(.mtry=c(2,20))),
+    rf2=caretModelSpec(method="rf", tuneGrid=data.frame(.mtry=10), preProcess="pca"),
+    nn=caretModelSpec(method="nnet", tuneLength=2, trace=FALSE)
+  )
+)
+
+```
+
+```{r}
+p <- as.data.frame(predict(model_list_big, newdata=head(testing)))
+print(p)
+```
+
+## Caret Ensemble (Custom Models)
+
+Finally, you should note that caretList does not support custom caret models. Fitting those models are beyond the scope of this vignette, but if you do so, you can manually add them to the model list (e.g. model_list_big[["my_custom_model"]] <- my_custom_model). **Just be sure to use the same re-sampling indexes in trControl as you use in the caretList models!**
+
+## Stacking (CaretEnsemble) - Greedy Algorithm
+```{r}
+results <- resamples(model_list_big)
+summary(results)
+dotplot(results)
+```
+
+```{r}
+caret::modelCor(results)
+lattice::splom(results)
+```
+
+```{r}
+greedy_ensemble <- caretEnsemble(
+  model_list_big, 
+  metric="ROC",
+  trControl=trainControl(
+    number=2,
+    summaryFunction=twoClassSummary,
+    classProbs=TRUE
+    ))
+summary(greedy_ensemble)
+```
+
+### Test Metrics
+
+The ensemble"s AUC on the test set can be calculated as follows:
+
+```{r}
+library("caTools")
+model_preds <- lapply(model_list_big, predict, newdata=testing, type="prob")
+model_preds <- lapply(model_preds, function(x) x[,"M"])
+model_preds <- data.frame(model_preds)
+ens_preds <- predict(greedy_ensemble, newdata=testing, type="prob")
+model_preds$ensemble <- ens_preds
+caTools::colAUC(model_preds, testing$Class)
+```
+
+### Extracting Variable importance in ensemble
+We can also use varImp to extract the variable importances from each member of the ensemble, as well as the final ensemble model:
+```{r}
+varImp(greedy_ensemble) 
+```
+
+
+## Stacking (CaretStack)
+
+caretStack allows us to move beyond simple blends of models to using “meta-models” to ensemble collections of predictive models. DO NOT use the trainControl object you used to fit the training models to fit the ensemble. The re-sampling indexes will be wrong. Fortunately, you don"t need to be fastidious with re-sampling indexes for caretStack, as it only fits one model, and the defaults train uses will usually work fine:
+
+#### Using simple glm
+
+```{r}
+glm_ensemble <- caretStack(
+  model_list_big,
+  method="glm",
+  metric="ROC",
+  trControl=trainControl(
+    method="boot",
+    number=10,
+    savePredictions="final",
+    classProbs=TRUE,
+    summaryFunction=twoClassSummary
+  )
+)
+```
+
+```{r}
+model_preds2 <- model_preds
+model_preds2$ensemble <- predict(glm_ensemble, newdata=testing, type="prob")
+CF <- coef(glm_ensemble$ens_model$finalModel)[-1]
+colAUC(model_preds2, testing$Class)
+```
+
+Note that glm_ensemble$ens_model is a regular caret object of class train. 
+
+#### Using gbm
+
+We can also use more sophisticated ensembles than simple linear weights, but these models are much more succeptible to over-fitting, and generally require large sets of resamples to train on (n=50 or higher for bootstrap samples). Lets try one anyways:
+
+```{r}
+library("gbm")
+gbm_ensemble <- caretStack(
+  model_list_big,
+  method="gbm",
+  verbose=FALSE,
+  tuneLength=10,
+  metric="ROC",
+  trControl=trainControl(
+    method="boot",
+    number=10,
+    savePredictions="final",
+    classProbs=TRUE,
+    summaryFunction=twoClassSummary
+  )
+)
+```
+
+```{r}
+model_preds3 <- model_preds
+model_preds3$ensemble <- predict(gbm_ensemble, newdata=testing, type="prob")
+colAUC(model_preds3, testing$Class)
+```
+
+In this case, the sophisticated ensemble is no better than a simple weighted linear combination. Non-linear ensembles seem to work best when you have:
+
+1. Lots of data.
+2. Lots of models with similar accuracies.
+3. Your models are uncorrelated: each one seems to capture a different aspect of the data, and different models perform best on different subsets of the data.
+
