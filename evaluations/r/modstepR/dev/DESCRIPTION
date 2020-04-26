@@ -1,0 +1,23 @@
+Package: modstepR
+Title: Modified Stepwise Variable Selection Algorithm
+Version: 0.0.2
+Authors@R: c( 
+    person(given = "Timothy (Tim)", family = "Fischer", role = c("aut", "cre"), email = "tfischer@ti.com"),
+    person(given = "Nikhil", family = "Gupta", role = c("aut", "ctb"), email = "ngupta@ti.com"))
+Description: The "Modified Stepwise" variable selection algorithm is a more efficient way to select variables 
+    to be used for a linear regression model. This can be especially useful for highly non-linear high dimensional 
+    space since it adds higher ordered terms and interactions in an computationally efficient manner.
+License: file LICENSE 
+BugReports: https://jira.itg.ti.com/projects/MODSTEPR/
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.0.0
+Imports: 
+    dplyr,
+    magrittr,
+    Metrics,
+    R6,
+    tidyverse
+Suggests: 
+    testthat (>= 2.1.0),
+    titanic
