@@ -1,7 +1,0 @@
-#!/bin/bash
-
-## Usage
-## Change to an executable, e.g. >> chmod 777 test_shell
-## Run the shell script, e.g. >> ./test_shell
-
-echo "Running Shell Script..."
