@@ -11,7 +11,7 @@ from pandas.core.groupby.generic import DataFrameGroupBy
 def apply_grouped_parallel_with_args(
     grouped_data: DataFrameGroupBy, func: Callable,
     unpacked:bool=False, reset_inner_index:bool=False, **kwargs
-    )  -> Union[Tuple, pd.Series, pd.DataFrame]:       
+    ) -> Union[Tuple, pd.Series, pd.DataFrame]:       
     
     """Function to parallelize the Pandas `apply` method on a `groupby` object 
 
@@ -86,5 +86,3 @@ def apply_grouped_parallel_with_args(
             return final_unpack
     else:
         raise(TypeError("Currently only supports functions that return a Pandas DataFrame, Pandas Series or a Tuple of values"))  
-  
-    
