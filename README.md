@@ -1,5 +1,6 @@
-# GRE
-GRE stands for **Great Reads and Evaluations**. 
+# Data Science Knowlege Base
+
+Previously GRE (**Great Reads and Evaluations**). 
 
 ## Great Reads
 The **"Great Reads"** section of this repository contains articles that I have found to be useful for understanding key concepts about topics of interest to me. These can also serve as a refresher or reference on these topics in the future.
