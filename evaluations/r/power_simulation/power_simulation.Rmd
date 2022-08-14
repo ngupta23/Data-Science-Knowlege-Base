@@ -1,0 +1,69 @@
+---
+title: "Untitled"
+author: "Nikhil Gupta"
+date: "3/31/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r message=TRUE, warning=TRUE, include=FALSE}
+library(tidyverse)
+library(DT)
+```
+
+
+```{r}
+
+set.seed(101)
+
+results = dplyr::tribble(~mu1, ~mu2, ~sd, ~sample_size, ~trial, ~percent_rejected) 
+
+trials = 10
+samples = 30  
+
+mu1s = c(5,6,7,8,9,10)
+mu2s = rep(5, length(mu1s))
+sds = c(1,2,3)
+sample_sizes = c(30,50,100,200)
+
+for (i in seq_along(mu1s)){
+  for (j in seq_along(sds)){
+    for (k in seq_along(sample_sizes)){
+      for (l in 1:trials){
+        count = 0
+        for (m in 1:samples){
+          A = rnorm(sample_sizes[k], mu1s[i], sds[j])
+          B = rnorm(sample_sizes[k], mu2s[i], sds[j])
+        
+          test = t.test(A, B)
+          pval = test$p.value
+          
+          if (pval < 0.05){
+            # Reject Null
+            count = count + 1
+          }
+        }
+        percent_rejected = count/samples*100
+        
+        results = results %>% 
+          dplyr::add_row(mu1 = mu1s[i], mu2 = mu2s[i], sd = sds[j], sample_size = sample_sizes[k], trial = l, percent_rejected = percent_rejected)
+      }
+    }
+  }
+}
+```
+
+
+```{r}
+DT::datatable(results %>%
+  dplyr::group_by(mu1, mu2, sd, sample_size) %>% 
+  dplyr::summarise(power = round(mean(percent_rejected),2),
+                   sd_power = round(sd(percent_rejected),2)))
+```
+
+
