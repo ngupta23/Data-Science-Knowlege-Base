@@ -1,0 +1,101 @@
+---
+title: "Parallel Evaluation"
+author: "Nikhil Gupta"
+date: "`r Sys.time()`"
+always_allow_html: yes
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 6
+  github_document:
+    toc: true
+    toc_depth: 6
+---
+
+
+
+**##########################################**
+**THIS IS NOT WORKING YET. CHECKING WITH MAX**
+**##########################################**
+
+# Setup
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(doSNOW, parallel, progress, foreach)
+```
+
+```{r}
+iter_vals = c(1:10000)
+```
+
+
+```{r}
+add_some_num = function(x, num){
+  return(x+num)
+}
+```
+
+
+```{r}
+#init parallel process with max number of cores
+cl <- makeCluster(detectCores())
+doSNOW::registerDoSNOW(cl)
+    
+#progress bar for the parallel loop
+pb <- progress::progress_bar$new(total = length(iter_vals), format='[:bar] :percent :eta')
+progress <- function(n) pb$tick()
+```
+
+
+# Parallel Loop
+```{r}
+# start a parellel loop per each year
+# 'num': If some argument is not expected to change, it still has to be repeated the same number of times.
+# .export: Used to export some function or variable from global env into foreah env
+
+dataRaw=NULL
+
+# Start the clock!
+ptm <- proc.time()
+
+dataRaw = foreach(
+  val=iter_vals,
+  num=rep(2, length(iter_vals)), 
+  .combine=rbind,
+  .export=c('add_some_num'),
+  .options.snow = list(progress=progress))%dopar%
+  {
+    return(add_some_num(val, num))
+  }
+
+# Stop the clock
+print(proc.time() - ptm)
+
+stopCluster(cl)
+```
+
+# Serial Loop
+```{r}
+# Start the clock!
+ptm <- proc.time()
+
+dataRaw = foreach(
+  val=iter_vals,
+  num=rep(2, length(iter_vals)), 
+  .combine=rbind,
+  .export=c('add_some_num'),
+  .options.snow = list(progress=progress))%do%
+  {
+    return(add_some_num(val, num))
+  }
+
+# Stop the clock
+print(proc.time() - ptm)
+```
+
