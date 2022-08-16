@@ -6,3 +6,7 @@
 *.log
 *.pkl
 *.png
+*mlruns/
+*catboost_info/
+*__pycache__/
+*.code-workspace
